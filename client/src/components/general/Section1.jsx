@@ -6,7 +6,7 @@ import Card3 from "./Card3";
 const Section1 = () => {
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center flex-wrap">
         <Card1 />
         <Card2 />
         <Card3 />

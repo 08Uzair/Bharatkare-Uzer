@@ -1,21 +1,26 @@
 import React from "react";
 import logo from "../../assets/logo.webp";
 import Button from "../general/Button";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
-  const data = ["HOME", "ABOUT Us", "CONTACT US"];
+  const data = [
+    { id: "'/'", name: "HOME" },
+    { id: "'/about'", name: "ABOUT Us" },
+    { id: "'/contact'", name: "CONTACT Us" },
+  ];
   return (
     <nav className=" pt-[3rem] pb-[1rem] sora ">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <div className="flex space-x-4 text-[12px]  pl-[3rem] ">
+        <div className="navOptions flex space-x-4 text-[12px]  pl-[3rem] ">
           {data.map((item) => {
             return (
               <>
-                <a
-                  href="#"
+                <NavLink
+                  path={item.id}
                   className="text-[#031b4e] font-bold tracking-wide hover:text-[#3368c6] letter-spacing-[0.3px]"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </NavLink>
                 <span className="text-[#031b4e] font-semibold hover:text-[##3368c6]">
                   •
                 </span>
@@ -24,13 +29,13 @@ const Navbar = () => {
           })}
         </div>
 
-        <div className="flex items-center ml-[10rem]">
+        <div className="logo flex items-center ml-[10rem]">
           <img src={logo} alt="Logo" className="w-[55%]" />
         </div>
 
         <div className="flex items-center space-x-4">
           {/* Phone Icon and Number */}
-          <div className="flex items-center space-x-2 phone">
+          <div className="contact flex items-center space-x-2 phone">
             <div className=" cir1 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,12 +55,12 @@ const Navbar = () => {
 
           {/* Search Icon */}
           <div className="cir">
-            <span class="material-symbols-outlined">search</span>
+            <span className="material-symbols-outlined">search</span>
           </div>
 
           {/* Cart Icon */}
           <div className="relative focus:outline-none cir">
-            <span class="material-symbols-outlined">local_mall</span>
+            <span className="material-symbols-outlined">local_mall</span>
             {/* Cart count */}
             <span className="absolute top-[-0.2rem] -right-2 bg-black text-white text-xs rounded-full p-[4px]">
               10
@@ -64,6 +69,7 @@ const Navbar = () => {
 
           {/* Book an Appointment Button */}
           <Button text="BOOK AN APPOINTMENT" />
+          <span class="menu material-symbols-outlined">menu</span>
         </div>
       </div>
     </nav>

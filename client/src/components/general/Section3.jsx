@@ -55,38 +55,33 @@ const Section3 = () => {
   }, [isInView]); // Depend on isInView state
 
   return (
-    <div className="min-h-screen bg-gray-100" ref={sectionRef}>
-      <div
-        className="rounded-tl-[30px] rounded-tr-[30px] transition-all duration-500 bg-[#3368c6] mx-auto"
-        style={{ width: containerWidth }} // Set the width dynamically
-      >
-        <img src={bg} alt="background" />
-
-        <div className="grid">
-          <div></div>
-          <div className="flex items-center justify-center mt-[-28rem] flex-col w-full p-[3rem]">
-            <Button3 text="OUR SERVICES" />
-            <Heading1 text=" We Provide Various Directions" />
-            <div className="text-start w-full mt-[4rem]">
-              <Button3 text="MOTIVATION" />
-              <Heading1 text="Our Specialities" />
-              <p className="mt-[2rem] text-[#fff]">
-                The healthcare arena felt the need to develop new approaches and
-                upgrade existing processes. This led to the creation of an
-                institution supported by the necessary infrastructure, advanced
-                technology, skilled professionals, and optimized workflows to
-                enhance patient care, streamline operations, and drive
-                innovation in medical treatment and service delivery.
-              </p>
-              <div>
-                <Tab1 />
-                <Tab2 />
-              </div>
-            </div>
+    <div
+      ref={sectionRef}
+      className="mainScreen grid absolute top-[0px] rounded-tl-[30px] bg-[#3266c1] rounded-tr-[30px] transition-all duration-500  mx-auto "
+      style={{ width: containerWidth }} // Set the width dynamically
+    >
+      <div></div>
+      <div className="flex items-center justify-center  flex-col w-full p-[3rem]">
+        <Button3 text="OUR SERVICES" />
+        <Heading1 text=" We Provide Various Directions" />
+        <div className="text-start  mt-[4rem]">
+          <Button3 text="MOTIVATION" />
+          <Heading1 text="Our Specialities" />
+          <p className="mt-[2rem] text-[#fff]">
+            The healthcare arena felt the need to develop new approaches and
+            upgrade existing processes. This led to the creation of an
+            institution supported by the necessary infrastructure, advanced
+            technology, skilled professionals, and optimized workflows to
+            enhance patient care, streamline operations, and drive innovation in
+            medical treatment and service delivery.
+          </p>
+          <div>
+            <Tab1 />
+            <Tab2 />
           </div>
-          <div></div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 };

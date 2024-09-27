@@ -16,6 +16,24 @@ body {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
+
+.mainScreen {
+  background-image: url("./assets/bg3.webp"); /* Make sure the path is correct */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  position: relative;
+}
+.btn {
+  font-weight: 600;
+  display: inline-block;
+  padding: 14px 20px 14px;
+}
+.btn2 {
+  padding: 16px 10px 16px;
+  background: #031b4e;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #fff;
+}
 .cir1 {
   width: 3rem;
   height: 3rem;
@@ -25,6 +43,9 @@ body {
   cursor: pointer;
   background-color: #fff;
   border-radius: 100%;
+}
+.menu {
+  display: none;
 }
 .cir {
   width: 3rem;
@@ -187,7 +208,8 @@ body {
     4.596% 0.565%
   );
 }
-
+.contactCardClip {
+}
 .cardClip1 {
   clip-path: polygon(
     4.596% 99.435%,
@@ -332,6 +354,154 @@ body {
     4.596% 99.435%
   );
 }
+.cardClip2 {
+  cursor: pointer;
+  clip-path: polygon(
+    4.596% 99.435%,
+    4.596% 99.435%,
+    3.947% 99.105%,
+    3.336% 98.691%,
+    2.766% 98.199%,
+    2.24% 97.636%,
+    1.762% 97.006%,
+    1.336% 96.314%,
+    0.966% 95.567%,
+    0.655% 94.77%,
+    0.407% 93.928%,
+    0.226% 93.046%,
+    0.226% 93.046%,
+    0.176% 92.367%,
+    0.134% 90.948%,
+    0.099% 88.757%,
+    0.071% 85.762%,
+    0.051% 81.928%,
+    0.037% 77.223%,
+    0.03% 71.614%,
+    0.029% 65.069%,
+    0.034% 57.553%,
+    0.045% 49.034%,
+    0.113% 6.538%,
+    0.747% 4.844%,
+    0.747% 4.844%,
+    0.969% 4.295%,
+    1.219% 3.77%,
+    1.495% 3.271%,
+    1.795% 2.799%,
+    2.119% 2.356%,
+    2.466% 1.943%,
+    2.834% 1.561%,
+    3.221% 1.214%,
+    3.628% 0.901%,
+    4.052% 0.624%,
+    5.094% 0%,
+    94.968% 0%,
+    96.009% 0.624%,
+    96.009% 0.624%,
+    96.433% 0.901%,
+    96.84% 1.214%,
+    97.228% 1.561%,
+    97.595% 1.943%,
+    97.942% 2.356%,
+    98.266% 2.799%,
+    98.566% 3.271%,
+    98.842% 3.77%,
+    99.092% 4.295%,
+    99.314% 4.844%,
+    99.948% 6.538%,
+    100.016% 37.741%,
+    100.016% 37.741%,
+    100.026% 43.819%,
+    100.03% 49.256%,
+    100.027% 54.061%,
+    100.017% 58.246%,
+    100.002% 61.82%,
+    99.98% 64.793%,
+    99.952% 67.176%,
+    99.919% 68.977%,
+    99.88% 70.207%,
+    99.835% 70.877%,
+    99.835% 70.877%,
+    99.782% 71.235%,
+    99.722% 71.591%,
+    99.657% 71.945%,
+    99.585% 72.297%,
+    99.506% 72.647%,
+    99.421% 72.994%,
+    99.33% 73.338%,
+    99.233% 73.68%,
+    99.129% 74.018%,
+    99.02% 74.354%,
+    99.02% 74.354%,
+    98.694% 75.142%,
+    98.32% 75.857%,
+    97.887% 76.508%,
+    97.382% 77.104%,
+    96.796% 77.656%,
+    96.115% 78.173%,
+    95.33% 78.665%,
+    94.428% 79.142%,
+    93.398% 79.613%,
+    92.228% 80.089%,
+    92.228% 80.089%,
+    90.917% 80.615%,
+    89.803% 81.147%,
+    88.861% 81.716%,
+    88.064% 82.358%,
+    87.387% 83.105%,
+    86.802% 83.992%,
+    86.285% 85.051%,
+    85.808% 86.316%,
+    85.345% 87.821%,
+    84.871% 89.599%,
+    84.871% 89.599%,
+    84.719% 90.212%,
+    84.565% 90.817%,
+    84.412% 91.402%,
+    84.262% 91.959%,
+    84.118% 92.478%,
+    83.984% 92.95%,
+    83.863% 93.365%,
+    83.757% 93.714%,
+    83.669% 93.987%,
+    83.603% 94.175%,
+    83.603% 94.175%,
+    83.404% 94.62%,
+    83.153% 95.091%,
+    82.858% 95.576%,
+    82.528% 96.065%,
+    82.171% 96.545%,
+    81.797% 97.006%,
+    81.414% 97.436%,
+    81.031% 97.823%,
+    80.656% 98.157%,
+    80.298% 98.425%,
+    80.298% 98.425%,
+    79.621% 98.859%,
+    78.889% 99.205%,
+    77.849% 99.473%,
+    76.251% 99.673%,
+    73.84% 99.814%,
+    70.367% 99.908%,
+    65.577% 99.963%,
+    59.22% 99.99%,
+    51.043% 99.999%,
+    40.794% 100%,
+    40.794% 100%,
+    31.784% 99.991%,
+    24.453% 99.978%,
+    18.619% 99.96%,
+    14.103% 99.934%,
+    10.725% 99.896%,
+    8.304% 99.844%,
+    6.661% 99.775%,
+    5.615% 99.685%,
+    4.987% 99.573%,
+    4.596% 99.435%
+  );
+}
+.cardClip2:hover {
+  transform: translateY(-10px);
+}
 
 .text3D {
   font-size: 5rem;
@@ -344,12 +514,72 @@ body {
   color: transparent;
   letter-spacing: 0.8px;
 }
+.text3D:hover {
+  color: #031b4e;
+}
 
+.sub-icon {
+  font-size: 3rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 50%;
+  rotate: -22deg;
+  color: #3368c6;
+}
+.tabBord {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 16px 2px 16px;
+}
+.tabBox {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.inputText1 {
+  padding: 16px 12px 16px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  outline: none;
+}
 .grid {
   display: grid;
   grid-template-columns: 0.2fr 4fr 0.2fr;
 }
-
+.inputBx {
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.btn1 {
+  border: 2px solid #fff;
+  padding: 7px 7px 6px;
+  width: 23%;
+  /* backdrop-filter: blur(5px); */
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+.btn1:hover {
+  background: #fff;
+  color: #515151;
+}
+.cont-icon {
+  font-size: 3rem;
+  color: #386bd9;
+}
+.txt2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #031b4e;
+  margin-top: 1rem;
+}
+.txt3 {
+  color: #6e778c;
+  margin-top: 4rem;
+}
 /* CSS for the scrolling animation */
 @keyframes scroll {
   0% {
@@ -362,5 +592,74 @@ body {
 
 /* Apply the animation to the scrolling container */
 .animate-scroll {
-  animation: scroll 50s linear infinite;
+  animation: scroll 90s linear infinite;
+}
+
+/* Responsive */
+
+@media (max-width: 1535px) {
+  .contact {
+    display: none;
+  }
+  .navOptions {
+    margin-left: -2rem;
+  }
+}
+@media (max-width: 1350px) {
+  .grid {
+    display: flex;
+  }
+}
+@media (max-width: 1280px) {
+  .navOptions {
+    display: none;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .button {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1020px) {
+  .homeForm {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1000px) {
+  .cardClip {
+    clip-path: none;
+    border-radius: 20px;
+  }
+  .cardClip1 {
+    clip-path: none;
+    border-radius: 20px;
+  }
+  .tabBox {
+    flex-direction: column;
+  }
+  .tabContent {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 760px) {
+  .cir {
+    display: none;
+  }
+}
+@media (max-width: 590px) {
+  .txt1 {
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+  }
+  .cardClip1 {
+    padding: 2rem;
+    width: 23rem;
+  }
 }
