@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "../../assets/logo.webp";
+import Button from "../general/Button";
 const Navbar = () => {
   const data = ["HOME", "ABOUT Us", "CONTACT US"];
   return (
-    <nav className=" pt-[3rem] pb-[1rem] sora">
+    <nav className=" pt-[3rem] pb-[1rem] sora ">
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex space-x-4 text-[12px]  pl-[3rem] ">
           {data.map((item) => {
@@ -23,7 +24,7 @@ const Navbar = () => {
           })}
         </div>
 
-        <div className="flex items-center ml-[13rem]">
+        <div className="flex items-center ml-[10rem]">
           <img src={logo} alt="Logo" className="w-[55%]" />
         </div>
 
@@ -57,18 +58,12 @@ const Navbar = () => {
             <span class="material-symbols-outlined">local_mall</span>
             {/* Cart count */}
             <span className="absolute top-[-0.2rem] -right-2 bg-black text-white text-xs rounded-full p-[4px]">
-              0
+              10
             </span>
           </div>
 
           {/* Book an Appointment Button */}
-          <div className="bg-[#031b4e] text-white text-[13px] p-4 h-[6.5vh] flex item-center  cursor-pointer justify-center  rounded-full hover:bg-[#5aa7bd] focus:outline-none">
-            BOOK AN APPOINTMENT
-            <div className="ml-2">
-              {" "}
-              <span class="material-symbols-outlined">north_east</span>
-            </div>
-          </div>
+          <Button text="BOOK AN APPOINTMENT" />
         </div>
       </div>
     </nav>
