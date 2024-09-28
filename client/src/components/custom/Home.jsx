@@ -1,8 +1,9 @@
 import React from "react";
-
+import bg from "../../assets/model.webp";
+import Button from "../general/Button";
 const Home = () => {
   return (
-    <div className="bg-blue-50 py-10">
+    <div className="bg-blue-50 py-10 mt-[2rem] mb-[3rem]">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
         {/* Left Section */}
         <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -14,21 +15,20 @@ const Home = () => {
               <p className="text-3xl font-bold text-blue-900">400 +</p>
               <p className="text-gray-600">DOCTORS</p>
             </div>
+            <div className="line"></div>
             <div>
               <p className="text-3xl font-bold text-blue-900">50 +</p>
               <p className="text-gray-600">DISEASES</p>
             </div>
+            <div className="line"></div>
             <div>
               <p className="text-3xl font-bold text-blue-900">45 +</p>
               <p className="text-gray-600">CITIES</p>
             </div>
           </div>
-          <div className="mt-6">
-            <a
-              href="tel: +91 8377882115"
-              className="bg-blue-700 text-white py-3 px-6 rounded-lg inline-block text-lg font-semibold"
-            >
-              Call Us : +91 8377882115
+          <div className="mt-6 w-[45%]">
+            <a href="tel: +91 8377882115">
+              <Button text="Call Us : +91 8377882115" />
             </a>
           </div>
           <p className="mt-4 text-gray-600">
@@ -54,8 +54,13 @@ const Home = () => {
           </ul>
         </div>
 
+        {/* Middle Section */}
+        <div className="w-[41%]">
+          <img className="w-[100%]" src={bg} />
+        </div>
+
         {/* Right Section */}
-        <div className=" homeForm bg-white p-8 rounded-lg shadow-md w-[100%] ml-[5rem]">
+        <div className=" homeForm bg-white p-8 rounded-lg shadow-md w-[40%] ml-[5rem]">
           <h2 className="text-xl font-semibold mb-4">Book Free Consultation</h2>
           <form className="space-y-4">
             <div>
@@ -67,7 +72,7 @@ const Home = () => {
             </div>
             <div>
               <input
-                type="text"
+                type="number"
                 placeholder="Mobile Number"
                 className="w-full p-3 border border-gray-300 rounded-lg"
               />
@@ -89,12 +94,7 @@ const Home = () => {
                 <option>Disease 3</option>
               </select>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold"
-            >
-              Book Now
-            </button>
+            <Button text="Book Now" />
           </form>
         </div>
       </div>

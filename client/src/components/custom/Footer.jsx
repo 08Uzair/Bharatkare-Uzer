@@ -1,9 +1,11 @@
 import React from "react";
+import Progress from "./Progress";
 
 const Footer = () => {
   return (
     <>
       <div className="text-[#fff] p-5 flex items-center justify-evenly w-[100%] h-[15vh] bg-[#031b4e]">
+        <Progress />
         <div className="">
           <p>OUR MISSION</p>
         </div>
