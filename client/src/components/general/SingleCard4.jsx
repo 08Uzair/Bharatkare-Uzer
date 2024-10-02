@@ -36,7 +36,10 @@ const SingleCard4 = () => {
       <div className="grid1 mt-[2rem]">
         <div></div>
         <div>
-          <Heading2 text=" Delivering world class medical care" />
+          <Heading2
+            txtSize="36px"
+            text=" Delivering world class medical care"
+          />
           <div className="flex items-center justify-start roboto ">
             <span className="font-semibold text-[#3b6fc8] text-[4rem] mr-3">
               M
@@ -57,7 +60,7 @@ const SingleCard4 = () => {
             Italy, Spain, Brazil and Chile.
           </div>
           <CheckMark />
-          <Heading2 text="Online simple step for appointment" />
+          <Heading2 txtSize="36px" text="Online simple step for appointment" />
           <div className="mt-[3rem] leading-8 text-[#767f93]">
             The Anglo-American model is also known as , ambulances are staffed
             by paramedics and/or emergency medical technicians. , but not to the
@@ -66,7 +69,7 @@ const SingleCard4 = () => {
             ambulances.
           </div>
           <StepsCard />
-          <Heading2 text="Frequently asked questions" />
+          <Heading2 txtSize="36px" text="Frequently asked questions" />
           <div className="mt-[3rem] leading-8 text-[#767f93]">
             Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud

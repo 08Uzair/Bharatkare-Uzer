@@ -4,9 +4,10 @@ import Navbar from "./components/custom/Navbar";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Main from "./pages/Main";
-import SingleCard4 from "./components/general/SingleCard4";
 import Footer from "./components/custom/Footer";
-import Cart from "./pages/Cart";
+import CheckOut from "./components/general/CheckOut";
+import SingleDisease from "./components/general/SingleDisease";
+import Data from "./components/general/Data";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/single" element={<SingleCard4 />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/singleDisease" element={<SingleDisease />} />
+          <Route path="/data" element={<Data />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <>
       <Home />
-      <Diseases />
+        <Diseases />
       <Section1 />
       <Section2 />
       <Section3 />

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const data = [
     { id: "/", name: "HOME" },
@@ -12,8 +13,22 @@ const Navbar = () => {
     { id: "/contact", name: "CONTACT Us" },
   ];
 
+  const citiesData = [
+    "Hyderabad",
+    "Banglore",
+    "Mumbai",
+    "Pune",
+    "Delhi",
+    "Maharashtra",
+    "Tamil Nadu",
+    "Jaipur",
+  ];
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
+  };
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
   };
 
   return (
@@ -68,7 +83,7 @@ const Navbar = () => {
             <div className="searchBar absolute top-16 right-0 bg-white p-4 shadow-lg">
               <span
                 onClick={toggleSearch}
-                class="searchCross material-symbols-outlined"
+                className="searchCross material-symbols-outlined"
               >
                 close
               </span>
@@ -77,19 +92,78 @@ const Navbar = () => {
                 placeholder="Search ..."
                 className="border border-gray-300 inputSearch p-2"
               />
-              <span class="searchIcon material-symbols-outlined">search</span>
+              <span className="searchIcon material-symbols-outlined">
+                search
+              </span>
             </div>
           )}
 
-          {/* Cart Icon */}
-          <div className="relative focus:outline-none cir">
-            <NavLink to="/cart">
-              <span className="material-symbols-outlined">local_mall</span>
-            </NavLink>
-            <span className="absolute top-[-0.2rem] -right-2 bg-black text-white text-xs rounded-full p-[4px]">
-              0
-            </span>
+          {/* Location Icon */}
+          <div
+            className="relative focus:outline-none cir"
+            onClick={toggleSidebar}
+          >
+            <span className="material-symbols-outlined">pin_drop</span>
           </div>
+
+          {/* Sidebar */}
+          <div
+            className={`fixed top-0 right-0 w-[30%] h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto hide-scrollbar ${
+              sidebarVisible ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="flex justify-between items-center">
+              <h2 className="text-[#031b4e] font-bold">Location Details</h2>
+              <span
+                className="material-symbols-outlined cursor-pointer"
+                onClick={toggleSidebar}
+              >
+                close
+              </span>
+            </div>
+
+            <div className="mt-4">
+              <div className="flex items-center justify-center outline-none">
+                <input
+                  style={{ border: "2px solid " }}
+                  className="p-2 rounded-[10px] m-3"
+                />
+              </div>
+
+              <div>
+                <div className="text-center">Popular Cities</div>
+                <div className="flex items-center justify-center flex-wrap">
+                  {citiesData.map((item, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        boxShadow:
+                          " 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
+                      }}
+                      className="flex items-center justify-center flex-col rounded-[15px] cursor-pointer m-[2rem] w-[8rem] text-center h-[20vh] bg-[#fff]"
+                    >
+                      <div
+                        style={{
+                          boxShadow:
+                            " 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
+                        }}
+                        className="rounded-[50%] mt-[1rem] p-[3rem] bg-[#fff] m-[1rem]"
+                      ></div>
+                      <div className="text-[#031b4e] mb-[0.5rem]">{item}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Overlay (Blur Effect) */}
+          {sidebarVisible && (
+            <div
+              className="fixed w-full inset-0 bg-black bg-opacity-40 backdrop-blur-[20px] z-40"
+              onClick={toggleSidebar} // Clicking the overlay will close the sidebar
+            ></div>
+          )}
 
           {/* Book an Appointment Button */}
           <NavLink to="/contact">

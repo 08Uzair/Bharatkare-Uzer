@@ -1,10 +1,10 @@
 import React from "react";
 
-const Heading2 = ({text}) => {
+const Heading2 = ({text,txtSize}) => {
   return (
     <>
       <div className="flex items-center  justify-start mt-[2rem] ">
-        <span className="text-[36px] text-[#031b4e] font-semibold">
+        <span style={{fontSize:`${txtSize}`}} className=" text-[#031b4e] font-semibold">
          {text}
         </span>
       </div>

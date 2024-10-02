@@ -522,8 +522,12 @@ body {
   color: transparent;
   letter-spacing: 0.8px;
 }
+
 .text3D:hover {
-  color: #031b4e;
+  cursor: pointer;
+  text-shadow: none;
+  transition: 5s ease !important;
+  -webkit-text-fill-color: #031b4e;
 }
 .searchBar {
   width: 100%;
@@ -586,10 +590,6 @@ body {
   width: 3px;
   background: #00000036;
 }
-.grid {
-  display: grid;
-  grid-template-columns: 0.2fr 4fr 0.2fr;
-}
 .grid1 {
   display: grid;
   grid-template-columns: 0.5fr 4fr 0.5fr;
@@ -628,7 +628,7 @@ body {
   color: #6e778c;
   margin-top: 4rem;
 }
-.btnArr{
+.btnArr {
   overflow: hidden;
 }
 .btnArr:hover img {
@@ -646,12 +646,100 @@ body {
     transform: translateX(-100%);
   }
 }
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ensure the content is still scrollable */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  overflow-y: scroll;  /* Ensure scrolling still works */
+}
 
 /* Apply the animation to the scrolling container */
 .animate-scroll {
   animation: scroll 90s linear infinite;
 }
 
+/*  */
+
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* The first arrow, pointing to top-right */
+.arrow1 {
+  position: absolute;
+  display: inline-block;
+  width: 40%;
+  transform: rotate(45deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* The second arrow, hidden initially */
+.arrow2 {
+  position: absolute;
+  display: inline-block;
+  width: 40%;
+  transform: rotate(45deg) translateY(50px); /* Start from below */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Hover effects */
+.arrbutton:hover .arrow1 {
+  transform: rotate(45deg) translateY(-20px); /* Move out top-right */
+  opacity: 0; /* Fade out */
+}
+
+.arrbutton:hover .arrow2 {
+  transform: rotate(45deg) translateY(0); /* Move in from below */
+  opacity: 1; /* Fade in */
+}
+.inputField {
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  border-bottom: 1px solid;
+}
+input::placeholder {
+  font-size: 12px;
+  color: #a9a9a9;
+}
+.arrBtn {
+  position: relative;
+  top: 7rem;
+  right: 4.5rem;
+}
+/*  */
+
+/* ScrollableServices.css */
+.scroll-container {
+  overflow-x: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.icon-p {
+  padding: 15px 13px 15px;
+}
 /* Responsive */
 
 @media (max-width: 1535px) {

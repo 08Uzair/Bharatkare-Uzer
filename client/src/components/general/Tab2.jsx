@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import bg1 from "../../assets/bg1.jpg";
+import bg1 from "../../assets/bg11.jpg";
+import bg2 from "../../assets/bg12.jpg";
 
 // Tab data with content
 const tabData = [
@@ -22,7 +23,7 @@ const tabData = [
     content: "Story of successful treatments",
     description:
       "At Bharatkare, we take pride in our successful track record of providing advanced treatments. We've helped our patients to overcome complex medical challenges, offering high-quality care at affordable rates. Our success stories reflect our commitment to excellence and our dedication to transforming healthcare in India",
-    image: bg1,
+    image: bg2,
     features: [
       "Best Advice",
       "Medical & Surgical Services",
@@ -50,7 +51,7 @@ const tabData = [
     content: "Guiding You to the better life",
     description:
       "At Bharatkare, our expert medical advisors are dedicated to helping you choose the perfect line of treatment. They carefully assess your unique medical needs, provide personalized recommendations, and ensure you make informed decisions. With their guidance, you can confidently navigate your healthcare journey.",
-    image: bg1,
+    image: bg2,
     features: [
       "Best Advice",
       "Medical & Surgical Services",
@@ -62,12 +63,12 @@ const tabData = [
 ];
 
 const MedicalTabs = () => {
-  const [activeTab, setActiveTab] = useState(2); // Set the default tab to "Certified Doctors"
+  const [activeTab, setActiveTab] = useState(0); // Set the default tab to "Certified Doctors"
 
   return (
     <div className="p-5">
       {/* Container for the entire tab section */}
-      <div className="bg-[#3368c6] text-white rounded-[30px] p-5">
+      <div className=" text-white rounded-[30px] p-5">
         {/* Button Container */}
         <div className="flex h-[15%]">
           {tabData.map((content, index) => (
@@ -78,7 +79,7 @@ const MedicalTabs = () => {
               ${
                 activeTab === index
                   ? "bg-[#fff] text-black" // Blue shade for active tab
-                  : "bg-[#3368c6] text-white"
+                  : "text-white"
               } `}
             >
               {content.title}
@@ -99,19 +100,20 @@ const MedicalTabs = () => {
 
           {/* Text Content Section */}
           <div className=" tabContent w-1/2 pl-8">
-            <h2 className="text-3xl font-semibold text-[#3368c6] mb-4">
+            <h2 className=" text-3xl font-semibold text-[#031b4e] mb-4">
               {tabData[activeTab].content}
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className=" roboto text-gray-700 mb-4">
               {tabData[activeTab].description}
             </p>
 
             {/* Additional Features for "Certified Doctors" */}
             {tabData[activeTab].features && (
-              <ul className="text-gray-600 space-y-2">
+              <ul className="roboto text-gray-600 space-y-2">
                 {tabData[activeTab].features.map((feature, idx) => (
                   <li key={idx} className="flex items-center">
-                    <span className="text-[#3368c6] mr-2">✔️</span> {feature}
+                    <span className="text-[#3368c6] mr-2 roboto">✔️</span>{" "}
+                    {feature}
                   </li>
                 ))}
               </ul>

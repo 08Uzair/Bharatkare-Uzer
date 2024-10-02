@@ -26,7 +26,7 @@ const Home = () => {
               <p className="text-gray-600">CITIES</p>
             </div>
           </div>
-          <div className="mt-6 w-[45%]">
+          <div className="mt-6 w-[53%]">
             <a href="tel: +91 8377882115">
               <Button text="Call Us : +91 8377882115" />
             </a>
@@ -67,7 +67,7 @@ const Home = () => {
               <input
                 type="text"
                 placeholder="Patient Name"
-                className="w-full p-3 border border-gray-300 rounded-lg"
+                className=" w-full p-3 border border-gray-300 rounded-lg"
               />
             </div>
             <div>
@@ -94,7 +94,9 @@ const Home = () => {
                 <option>Disease 3</option>
               </select>
             </div>
-            <Button text="Book Now" />
+            <div className="w-[50%]">
+              <Button text="Book Now" />
+            </div>
           </form>
         </div>
       </div>

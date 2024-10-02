@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../../assets/bg6.webp";
+import Button from "./Button";
 const ContactForm = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-50 p-4">
@@ -27,51 +28,34 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Your Name *"
-                className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" inputField w-1/2 px-4 py-2 "
               />
               <input
                 type="email"
                 placeholder="Your Email *"
-                className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" inputField w-1/2 px-4 py-2 "
               />
             </div>
             <div className="flex space-x-4">
               <input
                 type="tel"
                 placeholder="Your Phone *"
-                className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="inputField w-1/2 px-4 py-2 "
               />
               <input
                 type="text"
                 placeholder="Subject"
-                className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="inputField w-1/2 px-4 py-2 "
               />
             </div>
             <textarea
               placeholder="Message"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="inputField w-full px-4 py-2 "
               rows="4"
             ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-600 text-white py-3 px-6 rounded-md flex items-center justify-center space-x-2"
-            >
-              <span>Submit Now</span>
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14M12 5l7 7-7 7"
-                ></path>
-              </svg>
-            </button>
+            <div className="w-[50%]">
+              <Button text="Submit Now" />
+            </div>
           </form>
         </div>
       </div>

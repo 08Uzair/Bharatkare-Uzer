@@ -1,13 +1,13 @@
 import React from "react";
-import arr from "../../assets/arr.png";
+import arr from "../../assets/w-arrow.png";
+import Arrow from "./Arrow";
 const Button = ({ text }) => {
   return (
     <>
-      <div className=" btnArr button bg-[#031b4e] text-white text-[13px] p-4 h-[6.5vh] flex item-center  cursor-pointer justify-center  rounded-full hover:bg-[#5aa7bd] focus:outline-none">
+      <div className="tracking-wider arrbutton button bg-[#031b4e] text-white text-[13px] p-4 h-[6.5vh] flex items-center  cursor-pointer justify-center  rounded-full hover:bg-[#3367c4] focus:outline-none">
         {text}
         <div className="ml-2">
-          <img className="" src={arr} />
-          {/* <span class="material-symbols-outlined">north_east</span> */}
+          <Arrow clr="transparent" bg={arr} />
         </div>
       </div>
     </>
