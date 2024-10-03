@@ -3,13 +3,19 @@ import Button from "./Button";
 import Heading2 from "../general/Heading2";
 import model from "../../assets/model.webp";
 import calc from "../../assets/calc.png";
+import { useLocation } from "react-router-dom";
 const SingleDisease = () => {
   const [checkedSymptoms, setCheckedSymptoms] = useState({
     farsightedness: false,
     nearsightedness: false,
     squinting: false,
   });
-
+  const location = useLocation();
+  const { slug, content, title } = location.state || {};
+  console.log(slug);
+  console.log(title);
+  console.log(content);
+  // console.log(posts);
   const handleCheckboxChange = (symptom) => {
     setCheckedSymptoms((prev) => ({
       ...prev,
@@ -66,24 +72,32 @@ const SingleDisease = () => {
       iconColor: "#ff000014",
     },
   ];
+
   return (
     <div className="flex min-h-screen">
       <div className="w-3/5 overflow-y-auto p-8">
         <div className="bg-[#fff] rounded-[25px] p-6 mb-8">
           <div className="flex items-start justify-start ">
             <div className="w-[100%]">
-              <div>Home / </div>
+              <div>Home / {slug}</div>
               <Heading2
                 txtSize="32px"
-                text="Cataract Surgery - Safest Treatment & Highest Success Rate"
+                text={`${title} - Safest Treatment & Highest Success Rate`}
               />
               <div className="text-[15px] text-[#031b4e] mb-[1.5rem]">
-                Cataract surgery is a highly important and beneficial procedure
-                for individuals with cataracts. If left untreated, cataracts can
-                lead to several potential complications like vision impairment
-                and a decline h-[4vh] w-[2px] in overall quality of life. Book a
-                consultation today with Pristyn Care to undergo safe and
-                effective cataract surgery in India.
+                <span
+                  style={{
+                    textTransform: "capitalize",
+                  }}
+                >
+                  {slug}
+                </span>{" "}
+                is a highly important and beneficial procedure for individuals
+                with cataracts. If left untreated, cataracts can lead to several
+                potential complications like vision impairment and a decline
+                h-[4vh] w-[2px] in overall quality of life. Book a consultation
+                today with Pristyn Care to undergo safe and effective {title} in
+                India.
               </div>
               <Button text="Call Now : 123-4567-890" />
             </div>
@@ -91,8 +105,8 @@ const SingleDisease = () => {
               <img src={model} />
             </div>
           </div>
-          <div className="flex items-center justify-center bg-[#fff] rounded-[10px] text-center mt-[2rem]">
-            <div className="m-[1rem] bg-[#eef7ff] ">
+          <div className="flex items-center justify-center bg-[#eef7ff] rounded-[15px] text-center mt-[2rem]">
+            <div className="m-[1rem] ">
               <span className="font-semibold text-[24px] text-[#0071BC]">
                 2M+
               </span>
@@ -142,87 +156,20 @@ const SingleDisease = () => {
             </div>
           </div>
         </div>
-        <div className=" bg-[#fff] rounded-[25px] p-6 mb-8">
-          <div className="flex flex-col items-center justify-center min-h-screen">
-            <h1 className="text-3xl font-bold mb-6 text-center">
-              Best Eye Doctor for LASIK surgery in India
-            </h1>
-
-            <div className="flex items-center mb-6 w-full justify-center">
-              <input
-                type="text"
-                placeholder="Pimpri-chinchwad"
-                className="w-96 p-2 border border-gray-300 rounded-lg"
-              />
-            </div>
-
-            <div className="flex space-x-4 mb-8">
-              {["Delhi", "Gurgaon", "Noida", "Ahmedabad", "Bangalore"].map(
-                (city) => (
-                  <button
-                    key={city}
-                    className="bg-white border border-blue-500 text-blue-500 py-2 px-4 rounded-lg"
-                  >
-                    {city}
-                  </button>
-                )
-              )}
-            </div>
-
-            <div className="border rounded-lg  p-6 w-[40rem]">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://via.placeholder.com/64"
-                  alt="Doctor"
-                  className="w-16 h-16 rounded-full mr-4"
-                />
-                <div>
-                  <h2 className="text-xl font-semibold">
-                    Dr. Chanchal Gadodiya
-                  </h2>
-                  <p className="text-gray-600">
-                    MS, DNB, FICO, MRCS, Fellow Paediatric Opth and Strabismus
-                  </p>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <p className="text-lg text-gray-700">
-                  <span className="line-through text-gray-500">₹1000</span>
-                  <span className="ml-2 text-green-600 font-semibold">
-                    FREE Consultation
-                  </span>
-                </p>
-              </div>
-
-              <div className="flex items-center mb-4">
-                <span className="text-yellow-500 text-lg">&#9733;</span>
-                <p className="ml-2 text-gray-700">4.5/5</p>
-                <span className="ml-4 text-gray-600">11+ Years</span>
-              </div>
-
-              <p className="text-gray-600 mb-4">Pristyn Care Clinic, Pune</p>
-
-              <div className="flex justify-between items-center mb-4">
-                <button className="text-blue-500">
-                  Contact Us : 7353-242-666
-                </button>
-                <Button text="Book Free Appointment" />
-              </div>
-
-              <button className="border bg-[#3367c4] border-gray-300 text-[#fff] py-2 px-4 rounded-lg w-full">
-                View All Doctors
-              </button>
-            </div>
-          </div>
-        </div>
         <div className=" bg-[#fff] rounded-[25px] p-6 mb-[2rem]">
           <div className="flex flex-col items-center justify-center  ">
             <div className="bg-white rounded-lg w-full max-w-2xl p-6">
               <div className="flex items-center mb-4">
                 <img src={calc} alt="Calculator" className="w-12 h-12 mr-4" />
-                <h1 className="text-2xl font-semibold">
-                  Lasik Eye Surgery Cost Calculator
+                <h1 className="text-2xl font-semibold flex items-center justify-center">
+                  <p
+                    style={{
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {slug}-
+                  </p>
+                  Cost-Calculator
                 </h1>
               </div>
 
@@ -265,54 +212,15 @@ const SingleDisease = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#fff] rounded-[25px] p-6">
-          <div className="flex flex-col items-center justify-center mt-8  bg-[#fff] p-6 rounded-lg ">
-            <h2 className="text-xl font-semibold text-blue-600 mb-6">
-              Are you going through any of these symptoms?
-            </h2>
 
-            <div className="flex flex-col md:flex-row gap-4 mb-6 justify-center items-start md:items-center">
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={checkedSymptoms.farsightedness}
-                  onChange={() => handleCheckboxChange("farsightedness")}
-                  className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                />
-                <span>Blurry appearance of far objects [Farsightedness]</span>
-              </label>
-
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={checkedSymptoms.nearsightedness}
-                  onChange={() => handleCheckboxChange("nearsightedness")}
-                  className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                />
-                <span>Blurry appearance of near objects [Nearsightedness]</span>
-              </label>
-
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={checkedSymptoms.squinting}
-                  onChange={() => handleCheckboxChange("squinting")}
-                  className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                />
-                <span>Squinting or eye strain</span>
-              </label>
-            </div>
-
-            <button
-              disabled
-              className="bg-gray-300 text-gray-500 px-6 py-3 rounded-lg cursor-not-allowed"
-            >
-              Consult with our Experts
-            </button>
+        <div className="blogContainer h-auto rounded-[25px] list-disc bg-[#fff] p-[3.5rem] mt-[3rem] mb-[3rem]">
+          <div className="roboto leading-[40px]  text-[#6e778c] text-[16px] ">
+            <h1 className="roboto">{title}</h1>
+            <div
+              className="roboto "
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
           </div>
-        </div>
-        <div className="h-[150vh] rounded-[25px] bg-[#fff] p-6 mt-[3rem] mb-[3rem]">
-          Scrollable Div 2
         </div>
       </div>
 

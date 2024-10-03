@@ -12,7 +12,7 @@ import arr from "../../assets/w-arrow.png";
 import axios from "axios";
 const Card4 = ({ selectedCategory }) => {
   const [name, setName] = useState();
-  console.log(name)
+  console.log(name);
   useEffect(() => {
     axios
       .get("https://bharatkare.com/wp-json/wp/v2/categories?parent=99")
@@ -83,7 +83,7 @@ const Card4 = ({ selectedCategory }) => {
 
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center flex-col w-[100%]">
+      <div className="flex flex-wrap items-center justify-center flex-col w-[85%]">
         {filteredData.map((item, index) => (
           <div
             key={index}

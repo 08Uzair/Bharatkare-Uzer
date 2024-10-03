@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Post = () => {
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(posts);
+  console.log(post);
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPost = async () => {
       try {
         const response = await axios.get(
-          "https://bharatkare.com/wp-json/wp/v2/categories?per_page=100"
+          "https://bharatkare.com/wp-json/wp/v2/posts/541"
         );
-        setPosts(response.data);
+        setPost(response.data);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -20,7 +20,7 @@ const Post = () => {
       }
     };
 
-    fetchPosts();
+    fetchPost();
   }, []);
 
   if (loading) {
@@ -33,12 +33,8 @@ const Post = () => {
 
   return (
     <div>
-      {/* {posts.map((post) => (
-        <div key={post.id} className="post">
-          <h2>{post.title.rendered}</h2>
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-        </div>
-      ))} */}
+      <h1>{post.title.rendered}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
     </div>
   );
 };

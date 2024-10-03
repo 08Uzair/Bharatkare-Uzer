@@ -8,7 +8,7 @@ const Home = () => {
         {/* Left Section */}
         <div className="lg:w-1/2 mb-8 lg:mb-0">
           <h1 className="text-4xl font-bold text-blue-900">
-            Surgery Matlab Pristyn Care
+            Surgery Matlab BharatKare
           </h1>
           <div className="mt-4 flex space-x-8">
             <div>

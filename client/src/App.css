@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap");
 * {
-  text-decoration: none;
-  list-style: none;
   transition: all 0.6s ease;
   font-family: "Sora", system-ui;
+  list-style: disc;
 }
 body {
   background-color: #f0f7fd;
+  margin: auto;
 }
-
+.blogContainer figure {
+  display: none;
+}
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -658,8 +660,8 @@ body {
 
 /* Ensure the content is still scrollable */
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  overflow-y: scroll;  /* Ensure scrolling still works */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow-y: scroll; /* Ensure scrolling still works */
 }
 
 /* Apply the animation to the scrolling container */
