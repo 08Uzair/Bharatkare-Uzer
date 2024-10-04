@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bg from "../../assets/model.webp";
 import Button from "../general/Button";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,22 @@ const Home = () => {
   const [city, setCity] = useState("");
   const [disease, setDisease] = useState("");
 
+  const [selectDisease, setSelectDisease] = useState()
+  console.log(selectDisease)
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await axios.get(
+          "https://bharatkare.com/wp-json/wp/v2/posts?categories=99"
+        );
+        setSelectDisease(response.data);
+      } catch (error) {
+        console.log(error)
+      }
+    };
+
+    fetchPosts();
+  }, []);
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,22 +40,21 @@ const Home = () => {
 
     // First, check if the patient already exists in the sheet
     axios
-      .get("https://api.sheetbest.com/sheets/bae68d7c-51ae-4167-91dd-dc8e3a070d3e")
+      .get("https://api.sheetbest.com/sheets/cb752eac-5b4d-44bc-9245-87aaf213129d")
       .then((response) => {
         const existingPatients = response.data; // Adjust this based on your response structure
         const patientExists = existingPatients.some((patient) => patient.Name === name);
-
         if (patientExists) {
           alert(`The booking for ${name} has already been done.`);
         } else {
           // If the patient does not exist, proceed with the submission
           axios
             .post(
-              "https://api.sheetbest.com/sheets/bae68d7c-51ae-4167-91dd-dc8e3a070d3e",
+              "https://api.sheetbest.com/sheets/cb752eac-5b4d-44bc-9245-87aaf213129d",
               data,
               {
                 headers: {
-                  "Authorization": "Bearer DBICfzNBmZodAJW$1@8mPdvVtyH51PzpUY3cEKT9r2IQqmnVKU6gjeXwV2q!U12N",
+                  "Authorization": "Bearer 3ilm@8_nceYh!86rPX4@z0q7kcXyMBSD0KRLBbr%obNiTE-dEZYNV$L1Z@necPUT",
                 },
               }
             )
@@ -54,6 +70,7 @@ const Home = () => {
             .catch((error) => {
               console.error("There was an error submitting the form!", error);
             });
+          toast.success("Booked Sucessfully")
         }
       })
       .catch((error) => {
@@ -164,9 +181,18 @@ const Home = () => {
                 required
               >
                 <option value="">Select Disease</option>
-                <option value="Disease 1">Disease 1</option>
-                <option value="Disease 2">Disease 2</option>
-                <option value="Disease 3">Disease 3</option>
+
+                {
+                  selectDisease?.map((item, index) => {
+                    return (
+                      <>
+                        <option key={index} value={item.slug?.toUpperCase()}>{item.slug?.toUpperCase()}</option>
+                      </>
+                    )
+                  })
+                }
+
+
               </select>
             </div>
 
