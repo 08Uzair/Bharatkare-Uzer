@@ -57,7 +57,7 @@ const Section3 = () => {
   return (
     <div
       ref={sectionRef}
-      className="mainScreen flex items-center justify-center flex-col absolute top-[0px] rounded-tl-[30px] bg-[#3266c1] rounded-tr-[30px] transition-all duration-500  mx-auto "
+      className="mainScreen flex items-center justify-center flex-col absolute  rounded-tl-[30px] bg-[#3266c1] rounded-tr-[30px] transition-all duration-500  mx-auto "
       style={{ width: containerWidth }} // Set the width dynamically
     >
       <div></div>
