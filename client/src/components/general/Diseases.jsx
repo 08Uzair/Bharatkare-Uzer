@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import Loader from "../custom/Loader";
 const Diseases = () => {
   const [showMore, setShowMore] = useState(true);
 
@@ -10,7 +11,7 @@ const Diseases = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  console.log(data);
+  // console.log(data);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -29,7 +30,11 @@ const Diseases = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
@@ -50,7 +55,7 @@ const Diseases = () => {
   return (
     <>
       <div className="flex items-center justify-center items-center flex-col">
-        <div className="flex items-center justify-center flex-wrap text-center mr-[8rem] ml-[8rem]">
+        <div className="diseaseSection flex items-center justify-center flex-wrap text-center mr-[8rem] ml-[8rem]">
           {filteredData?.map((item, index) => {
             return (
               <>

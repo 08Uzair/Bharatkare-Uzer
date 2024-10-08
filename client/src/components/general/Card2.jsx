@@ -16,8 +16,8 @@ const Card2 = () => {
               </span>
             </div>
           </div>
-          <div className="mt-4 mb-5 text-sm leading-9">
-            <Button1 text={"GET DIRECTION"} />
+          <div className=" mt-4 mb-5 text-sm leading-9">
+            <Button1  text={"GET DIRECTION"} />
           </div>
         </div>
       </div>

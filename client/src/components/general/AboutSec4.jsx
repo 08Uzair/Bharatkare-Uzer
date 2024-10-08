@@ -60,9 +60,9 @@ const AboutSec4 = () => {
   return (
     <div className="mb-[10rem]">
       {/* Main Container */}
-      <div className="container mx-auto mt-12 flex  justify-between">
+      <div className="aboutSec4 container mx-auto mt-12 flex  justify-between">
         {/* Left Box */}
-        <div className="w-[50%] p-[10rem] h-[80vh] sticky top-9">
+        <div className="para1 w-[50%] p-[10rem] h-[80vh] sticky top-9">
           <div className="flex flex-col items-start justify-center h-full">
             <Button3 text="MOTIVATION" />
             <Heading2
@@ -81,17 +81,17 @@ const AboutSec4 = () => {
         </div>
 
         {/* Right Box */}
-        <div className="  w-[80%] ">
+        <div className="aboutSec4-box ">
           {/* Replace these divs with images and text as needed */}
           {data?.map((item, index) => {
             return (
               <>
                 <div
                   key={index}
-                  className="arrbutton cursor-pointer cardClip1 bg-white rounded-[30px] p-6 shadow-lg flex relative overflow-hidden w-[80%] m-[3rem]"
+                  className="aboutService-img arrbutton para2 cursor-pointer cardClip1 bg-white rounded-[30px] p-6 shadow-lg flex relative overflow-hidden mb-[1.5rem] "
                 >
                   {/* Left Side Image */}
-                  <div className="w-1/2">
+                  <div className="">
                     <img
                       src={item.bg}
                       alt="Medical Robot"
@@ -100,21 +100,23 @@ const AboutSec4 = () => {
                   </div>
 
                   {/* Right Side Content */}
-                  <div className="w-1/2 pl-6 flex flex-col justify-between">
+                  <div className=" p-3 flex flex-col justify-between">
                     {/* Header */}
                     <div className="flex flex-col items-start ">
                       <div className="flex items-center">
                         <div className="flex items-start flex-col ">
                           <div>
-                            <Heading2 txtSize="15px" text={item.sname} />
+                            <h2 className="text-[15px] text-[#3367c4]">
+                              {item.sname}
+                            </h2>
                           </div>
                           <div className="relative top-[-1rem]">
                             <Heading2 txtSize="25px" text={item.fname} />
                           </div>
                         </div>
-                        <div className="w-[100%] m-[1rem]" >
-                          <img className="w-[100%] "  src={item.icon} />
-                        </div>
+                        {/* <div className="w-[100%] m-[1rem]">
+                          <img className="iconImg" src={item.icon} />
+                        </div> */}
                       </div>
                     </div>
 

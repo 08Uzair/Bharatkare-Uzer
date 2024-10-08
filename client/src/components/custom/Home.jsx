@@ -10,8 +10,8 @@ const Home = () => {
   const [city, setCity] = useState("");
   const [disease, setDisease] = useState("");
 
-  const [selectDisease, setSelectDisease] = useState()
-  console.log(selectDisease)
+  const [selectDisease, setSelectDisease] = useState();
+  console.log(selectDisease);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -20,7 +20,7 @@ const Home = () => {
         );
         setSelectDisease(response.data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
 
@@ -40,10 +40,14 @@ const Home = () => {
 
     // First, check if the patient already exists in the sheet
     axios
-      .get("https://api.sheetbest.com/sheets/cb752eac-5b4d-44bc-9245-87aaf213129d")
+      .get(
+        "https://api.sheetbest.com/sheets/cb752eac-5b4d-44bc-9245-87aaf213129d"
+      )
       .then((response) => {
         const existingPatients = response.data; // Adjust this based on your response structure
-        const patientExists = existingPatients.some((patient) => patient.Name === name);
+        const patientExists = existingPatients.some(
+          (patient) => patient.Name === name
+        );
         if (patientExists) {
           alert(`The booking for ${name} has already been done.`);
         } else {
@@ -54,7 +58,8 @@ const Home = () => {
               data,
               {
                 headers: {
-                  "Authorization": "Bearer 3ilm@8_nceYh!86rPX4@z0q7kcXyMBSD0KRLBbr%obNiTE-dEZYNV$L1Z@necPUT",
+                  Authorization:
+                    "Bearer 3ilm@8_nceYh!86rPX4@z0q7kcXyMBSD0KRLBbr%obNiTE-dEZYNV$L1Z@necPUT",
                 },
               }
             )
@@ -70,7 +75,7 @@ const Home = () => {
             .catch((error) => {
               console.error("There was an error submitting the form!", error);
             });
-          toast.success("Booked Sucessfully")
+          toast.success("Booked Sucessfully");
         }
       })
       .catch((error) => {
@@ -131,13 +136,16 @@ const Home = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="w-[41%]">
+        <div className="model w-[41%]">
           <img className="w-[100%]" src={bg} alt="Surgery illustration" />
         </div>
 
         {/* Right Section */}
         <div className="homeForm bg-white p-8 rounded-lg shadow-md w-[40%] ml-[5rem]">
-          <h2 className="text-xl font-semibold mb-4">Book Free Consultation</h2>
+          <h2 className="txt-form text-xl font-semibold mb-4">Book Free Consultation</h2>
+          <div className=" w-[41%] model1">
+            <img className="w-[100%]" src={bg} alt="Surgery illustration" />
+          </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <input
@@ -182,21 +190,19 @@ const Home = () => {
               >
                 <option value="">Select Disease</option>
 
-                {
-                  selectDisease?.map((item, index) => {
-                    return (
-                      <>
-                        <option key={index} value={item.slug?.toUpperCase()}>{item.slug?.toUpperCase()}</option>
-                      </>
-                    )
-                  })
-                }
-
-
+                {selectDisease?.map((item, index) => {
+                  return (
+                    <>
+                      <option key={index} value={item.slug?.toUpperCase()}>
+                        {item.slug?.toUpperCase()}
+                      </option>
+                    </>
+                  );
+                })}
               </select>
             </div>
 
-            <div className="w-[50%]">
+            <div className="form-btn w-[50%]">
               <button type="submit">
                 <Button text="Book Now" />
               </button>

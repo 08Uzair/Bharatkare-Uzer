@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CustomWall from "./CustomWall";
 import bg from "../../assets/bg7.webp";
 import Heading2 from "./Heading2";
 import CheckMark from "./CheckMark";
 import StepsCard from "./StepsCard";
 import CustomAccordion from "../custom/CustomAccordion";
-
+import { useLocation } from "react-router-dom";
 const SingleCard4 = () => {
   const items = [
     {
@@ -24,9 +24,17 @@ const SingleCard4 = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ];
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+  const location = useLocation();
+  const { slug, content, title } = location.state || {};
+  console.log(slug);
+  console.log(title);
+  console.log(content);
   return (
     <>
-      <CustomWall txt1="Aesthetic" txt2="Service" />
+      <CustomWall txt1={`${title}`} txt2="Service" />
       <div className="flex items-center justify-center flex-col">
         <div
           className="w-[95%] h-[108vh] bg-cover bg-center rounded-[25px] mt-[4rem]"
@@ -51,7 +59,7 @@ const SingleCard4 = () => {
               EMS departments operate solely with their hospital
             </span>
           </div>
-          <div className="mt-[3rem] leading-8 text-[#767f93]">
+          <div className="mt-[3rem] leading-8 text-[#767f93] m-4">
             The physicians will attempt to treat casualties at the scene and
             will only transport them to hospital if it is deemed necessary. If
             patients are transported to hospital, they are more likely to go
@@ -60,15 +68,23 @@ const SingleCard4 = () => {
             Italy, Spain, Brazil and Chile.
           </div>
           <CheckMark />
-          <Heading2 txtSize="36px" text="Online simple step for appointment" />
-          <div className="mt-[3rem] leading-8 text-[#767f93]">
-            The Anglo-American model is also known as , ambulances are staffed
-            by paramedics and/or emergency medical technicians. , but not to the
-            same level as a physician. In this model it is rare to find a
-            physician actually Specialized medical training working routinely in
-            ambulances.
+          <div className="m-4">
+            <Heading2
+              txtSize="36px"
+              text="Online simple step for appointment"
+            />
+            <div className="mt-[3rem] leading-8 text-[#767f93]">
+              The Anglo-American model is also known as , ambulances are staffed
+              by paramedics and/or emergency medical technicians. , but not to
+              the same level as a physician. In this model it is rare to find a
+              physician actually Specialized medical training working routinely
+              in ambulances.
+            </div>
           </div>
-          <StepsCard />
+
+          <div className="w-[100%] flex items-center justify-center">
+            <StepsCard />
+          </div>
           <Heading2 txtSize="36px" text="Frequently asked questions" />
           <div className="mt-[3rem] leading-8 text-[#767f93]">
             Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut

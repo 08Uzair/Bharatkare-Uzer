@@ -3,11 +3,11 @@ import bg from "../../assets/bg8.jpg";
 const StepsCard = () => {
   return (
     <>
-      <div className="flex items-center justify-center flex-wrap">
-        <div className="stepCard rounded-[25px] mt-[4rem] w-[25%] mr-[5rem]">
-          <div className="rounded-[25px] w-[100%]">
+      <div className="stepSection flex items-center justify-center flex-wrap mt-[4rem] w-[100%]">
+        <div className="stepCard rounded-[25px] m-[1rem] w-[30%]  relative">
+          <div className="rounded-[25px] w-[100%] ">
             <img className="cardClip rounded-[25px]" src={bg} />
-            <span className="relative top-[-12.5rem] left-[17rem] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
+            <span className="stepbox stepbox absolute top-[-5px] right-[-20px] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
               Step: 1
             </span>
           </div>
@@ -20,10 +20,10 @@ const StepsCard = () => {
             </div>
           </div>
         </div>
-        <div className="stepCard rounded-[25px] mt-[4rem] w-[25%]">
-          <div className="rounded-[25px] w-[100%]">
+        <div className="stepCard rounded-[25px] m-[1rem] w-[30%] ">
+          <div className="rounded-[25px] w-[100%] relative">
             <img className="cardClip1 rounded-[25px]" src={bg} />
-            <span className="relative top-[-1.5rem] left-[17rem] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
+            <span className="stepbox absolute bottom-[-5px] right-[-20px] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
               Step: 2
             </span>
           </div>
@@ -37,10 +37,10 @@ const StepsCard = () => {
             </div>
           </div>
         </div>
-        <div className="stepCard rounded-[25px] mt-[4rem] w-[25%] ml-[5rem]">
+        <div className="stepCard rounded-[25px] m-[1rem] w-[30%]  relative">
           <div className="rounded-[25px] w-[100%]">
             <img className="cardClip rounded-[25px]" src={bg} />
-            <span className="relative top-[-12.5rem] left-[17rem] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
+            <span className="stepbox absolute top-[-5px] right-[-20px] text-[10px] bg-[#031b4e] text-[#fff] p-3 rounded-[50px]">
               Step: 3
             </span>
           </div>

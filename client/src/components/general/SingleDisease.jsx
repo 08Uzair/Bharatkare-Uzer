@@ -1,27 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import Heading2 from "../general/Heading2";
 import model from "../../assets/model.webp";
 import calc from "../../assets/calc.png";
 import { useLocation } from "react-router-dom";
 const SingleDisease = () => {
-  const [checkedSymptoms, setCheckedSymptoms] = useState({
-    farsightedness: false,
-    nearsightedness: false,
-    squinting: false,
-  });
+  // const [checkedSymptoms, setCheckedSymptoms] = useState({
+  //   farsightedness: false,
+  //   nearsightedness: false,
+  //   squinting: false,
+  // });
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const location = useLocation();
   const { slug, content, title } = location.state || {};
   console.log(slug);
   console.log(title);
   console.log(content);
   // console.log(posts);
-  const handleCheckboxChange = (symptom) => {
-    setCheckedSymptoms((prev) => ({
-      ...prev,
-      [symptom]: !prev[symptom],
-    }));
-  };
+  // const handleCheckboxChange = (symptom) => {
+  //   setCheckedSymptoms((prev) => ({
+  //     ...prev,
+  //     [symptom]: !prev[symptom],
+  //   }));
+  // };
   const services = [
     {
       label: "Free Consultation",

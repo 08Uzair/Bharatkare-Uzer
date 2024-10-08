@@ -12,7 +12,8 @@ const AboutCards = () => {
     {
       txt1: "calendar_month",
       txt2: "Appointments",
-      txt3: "Call 844-463-2778 or click to request a same-day .",
+      txt3: "Call 844-463-2778 or click ",
+      txt4:"to request a same-day ."
     },
     {
       txt1: "distance",
@@ -23,16 +24,19 @@ const AboutCards = () => {
   ];
   return (
     <>
-      <div className="flex items-center justify-center felx-wrap mt-[4rem] mb-[4rem]">
+      <div className="flex items-center justify-center flex-wrap mt-[4rem] mb-[4rem] w-[100%]">
         {data.map((item, index) => {
           return (
             <>
-              <CustomCard
+            <div className="m-8">
+            <CustomCard
                 txt1={item.txt1}
                 txt2={item.txt2}
                 txt3={item.txt3}
                 txt4={item.txt4}
               />
+            </div>
+             
             </>
           );
         })}

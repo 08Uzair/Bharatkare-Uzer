@@ -66,7 +66,7 @@ const MedicalTabs = () => {
   const [activeTab, setActiveTab] = useState(0); // Set the default tab to "Certified Doctors"
 
   return (
-    <div className="p-5">
+    <div className="tabToggle p-5">
       {/* Container for the entire tab section */}
       <div className=" text-white rounded-[30px] p-5">
         {/* Button Container */}

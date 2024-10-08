@@ -49,6 +49,9 @@ body {
 .menu {
   display: none;
 }
+.model1 {
+  display: none;
+}
 .cir {
   width: 3rem;
   height: 3rem;
@@ -66,6 +69,21 @@ body {
 .phone span:hover {
   color: #3368c6;
 }
+
+/* Loader */
+.loaderAnimate {
+  animation: animateLoad 1s linear infinite;
+}
+@keyframes animateLoad {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
 .cardClip {
   clip-path: polygon(
     4.596% 0.565%,
@@ -594,7 +612,7 @@ body {
 }
 .grid1 {
   display: grid;
-  grid-template-columns: 0.5fr 4fr 0.5fr;
+  grid-template-columns: 0.2fr 6fr 0.2fr;
 }
 .inputBx {
   border-bottom-left-radius: 50px;
@@ -628,7 +646,7 @@ body {
 }
 .txt3 {
   color: #6e778c;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 .btnArr {
   overflow: hidden;
@@ -751,6 +769,39 @@ input::placeholder {
   .navOptions {
     margin-left: -2rem;
   }
+  .button {
+    font-size: 9px !important;
+  }
+}
+@media (max-width: 1390px) {
+  .aboutSec2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .aboutSec4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .aboutSec4-box {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 4rem;
+  }
+  .para1 {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+  .para2 {
+    width: 100%;
+  }
 }
 @media (max-width: 1350px) {
   .grid {
@@ -764,12 +815,41 @@ input::placeholder {
   .logo {
     margin-left: 0;
   }
-  .button {
-    display: none;
+  .menuButton {
+    display: none !important;
   }
   .menu {
     display: flex;
     font-size: 2rem;
+  }
+  .model {
+    display: none;
+  }
+  .homeForm {
+    width: 80%;
+  }
+  .model1 {
+    display: flex;
+  }
+  .diseaseSection {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .subSec {
+    flex-direction: column !important;
+  }
+  .subBox {
+    width: 90%;
+  }
+  .tabToggle {
+    display: none;
+  }
+  .tabs-btn {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1020px) {
@@ -793,10 +873,41 @@ input::placeholder {
     width: 100%;
     margin-top: 2rem;
   }
+  .txt-form {
+    text-align: center;
+  }
+  .form-btn {
+    width: 65%;
+  }
+}
+@media (max-width: 900px) {
+  .stepSection {
+    flex-direction: column;
+  }
+  .stepCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 865px) {
+  .stepbox {
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 5vh;
+  }
 }
 @media (max-width: 760px) {
   .cir {
     display: none;
+  }
+}
+@media (max-width: 700px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 @media (max-width: 590px) {
@@ -807,6 +918,106 @@ input::placeholder {
   }
   .cardClip1 {
     padding: 2rem;
-    width: 23rem;
+    width: 24rem;
+  }
+}
+@media (max-width: 530px) {
+  .subBox-txt {
+    font-size: 25px !important;
+  }
+  .btn1 {
+    width: 50%;
+  }
+  .head2 {
+    font-size: 1.3rem !important;
+  }
+  /* .txt1 {
+    font-size: 1.1rem;
+  } */
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+  .contactImg {
+    display: none;
+  }
+  .cont-text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .cont-btn {
+    width: 80%;
+  }
+  .txt2 {
+    font-size: 25px;
+  }
+  .txt3 {
+    font-size: 15px;
+  }
+  .banner-txt2 {
+    font-size: 2rem;
+  }
+  .aboutService-img {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 510px) {
+  .subInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .inputText1 {
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  .btn2 {
+    border-radius: 20px;
+  }
+  .cardClip1 {
+    width: 18rem;
+  }
+  .cardClip {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  .subBox {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  .card4Box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  .knowBtn {
+    width: 50%;
+  }
+}
+@media (max-width: 380px) {
+  .checOut {
+    flex-direction: column;
+  }
+  .cardClip {
+    width: 19rem;
+  }
+  .sec2Btn {
+    width: 75%;
+  }
+  .secImg {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .cardClip1 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
   }
 }

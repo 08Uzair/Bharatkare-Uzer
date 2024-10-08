@@ -10,8 +10,8 @@ import Diseases from "../components/general/Diseases";
 const Main = () => {
   return (
     <>
-      <Home />
-        <Diseases />
+      {/* <Home /> */}
+      <Diseases />
       <Section1 />
       <Section2 />
       <Section3 />

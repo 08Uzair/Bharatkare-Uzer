@@ -13,7 +13,7 @@ const CheckMark = () => {
   ];
   return (
     <>
-      <div className="flex items-center justify-evenly text-start mt-[4rem]">
+      <div className="checOut flex items-center justify-evenly text-start mt-[4rem]">
         <div>
           {data?.slice(0, 4).map((item) => {
             return (

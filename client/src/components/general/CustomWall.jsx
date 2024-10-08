@@ -10,10 +10,10 @@ const CustomWall = ({ txt1, txt2 }) => {
           style={{ backgroundImage: `url(${bg1})` }}
         >
           {/* Content of the section */}
-          <div className="relative z-10 flex items-center justify-start p-[5rem] h-full ">
+          <div className="relative z-10 flex items-center justify-start p-[3rem] h-full ">
             <div>
               <h4 className=" text-[1rem] text-[#031b4e]">{txt2}</h4>
-              <h1 className=" text-[4rem] text-[#031b4e]">{txt1}</h1>
+              <h1 className="banner-txt2 text-[4rem] text-[#031b4e]">{txt1}</h1>
               <h4 className=" text-[1rem] text-[#031b4e]">
                 BharatKare / {txt1}
               </h4>

@@ -10,15 +10,13 @@ const AboutSec2 = () => {
     <>
       <div className="grid1  mt-[2rem]">
         <div></div>
-        <div className="flex  justify-evenly">
-          <div className="w-[100%]">
-            <img className="rounded-[25px]" src={bg1} />
-            <img
-              className="relative bottom-[18rem] left-[14rem] rounded-[25px]"
+        <div className="aboutSec2 flex items-center justify-center">
+            <img className="about-img1 rounded-[25px] w-[100%] m-12" src={bg1} />
+            {/* <img
+              className="about-img2 absolute  w-[100%] rounded-[25px]"
               src={bg2}
-            />
-          </div>
-          <div className="pl-[18rem]">
+            /> */}
+          <div >
             <Button3 text="ABOUT US" />
 
             <Heading2
@@ -41,7 +39,7 @@ const AboutSec2 = () => {
                 <Heading2 txtSize="20px" text="2.9K+ Parcel Believed By Team" />
               </div>
             </div>
-            <div className="w-[40%] mt-6">
+            <div className="knowBtn w-[40%] mt-6">
               <Button text="KNOW MORE" />
             </div>
           </div>

@@ -22,16 +22,18 @@ const ContactCard = () => {
   ];
   return (
     <>
-      <div className="flex items-center justify-center felx-wrap mt-[4rem] mb-[4rem]">
+      <div className="w-[100%] flex items-center justify-center flex-wrap mt-[4rem] mb-[4rem]">
         {data.map((item, index) => {
           return (
             <>
-              <CustomCard
-                txt1={item.txt1}
-                txt2={item.txt2}
-                txt3={item.txt3}
-                txt4={item.txt4}
-              />
+              <div className="m-12">
+                <CustomCard
+                  txt1={item.txt1}
+                  txt2={item.txt2}
+                  txt3={item.txt3}
+                  txt4={item.txt4}
+                />
+              </div>
             </>
           );
         })}

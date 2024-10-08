@@ -64,10 +64,10 @@ const Section3 = () => {
       <div className="flex items-center justify-center  flex-col w-full p-[3rem]">
         <Button3 text="OUR SERVICES" />
         <Heading1 text=" We Provide Various Directions" />
-        <div className="text-start  mt-[4rem]">
+        <div className=" text-start  mt-[4rem] ">
           <Button3 text="MOTIVATION" />
           <Heading1 text="Our Specialities" />
-          <p className="mt-[2rem] text-[#fff]">
+          <p className="mt-[2rem] m-4 text-[#fff]">
             The healthcare arena felt the need to develop new approaches and
             upgrade existing processes. This led to the creation of an
             institution supported by the necessary infrastructure, advanced

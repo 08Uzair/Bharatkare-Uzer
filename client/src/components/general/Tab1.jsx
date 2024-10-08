@@ -26,7 +26,7 @@ const Tab1 = () => {
   return (
     <div className="p-5 flex items-center justify-center flex-wrap ">
       {/* Toggle Buttons */}
-      <div className="mb-[4rem]">
+      <div className="tabs-btn mb-[4rem]">
         {categories.map((category) => (
           <button
             key={category}

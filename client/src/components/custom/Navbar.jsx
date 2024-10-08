@@ -166,10 +166,12 @@ const Navbar = () => {
           )}
 
           {/* Book an Appointment Button */}
-          <NavLink to="/contact">
-            <Button text="BOOK AN APPOINTMENT" />
-            <span className="menu material-symbols-outlined">menu</span>
-          </NavLink>
+          <div className="menuButton">
+            <NavLink to="/contact">
+              <Button text="BOOK AN APPOINTMENT" />
+            </NavLink>
+          </div>
+          <span className="menu material-symbols-outlined">menu</span>
         </div>
       </div>
     </nav>

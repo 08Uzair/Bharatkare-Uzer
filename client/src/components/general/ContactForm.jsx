@@ -6,7 +6,7 @@ const ContactForm = () => {
     <div className="min-h-screen flex items-center justify-center bg-blue-50 p-4">
       <div className="bg-white rounded-[25px] shadow-lg flex overflow-hidden w-full max-w-5xl">
         {/* Left Section: Image */}
-        <div className="w-full md:w-1/2">
+        <div className="contactImg w-full md:w-1/2">
           <img src={bg} alt="Doctor" className="w-full h-full object-cover" />
         </div>
 
@@ -18,7 +18,7 @@ const ContactForm = () => {
             </button>
           </div>
 
-          <h2 className="text-[48px] leading-[60px]  font-medium text-[#031b4e] mb-6">
+          <h2 className="cont-text text-[48px] leading-[60px]  font-medium text-[#031b4e] mb-6">
             Make an appointment
             <br />
             apply for treatments
@@ -53,7 +53,7 @@ const ContactForm = () => {
               className="inputField w-full px-4 py-2 "
               rows="4"
             ></textarea>
-            <div className="w-[50%]">
+            <div className="cont-btn w-[60%]">
               <Button text="Submit Now" />
             </div>
           </form>
