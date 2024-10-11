@@ -61,14 +61,31 @@ body {
   cursor: pointer;
   background-color: #fff;
   border-radius: 100%;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 .cir:hover {
-  background-color: #3368c6;
   color: #fff !important;
+  background-color: #3368c6;
 }
 .phone span:hover {
   color: #3368c6;
 }
+
+
+/* Home1 circles  */
+
+.clip-circle-gray {
+  clip-path: circle(50%);
+}
+
+.clip-circle-blue {
+  clip-path: circle(50%);
+}
+
+
+/*  */
+
 
 /* Loader */
 .loaderAnimate {
@@ -227,8 +244,6 @@ body {
     4.987% 0.427%,
     4.596% 0.565%
   );
-}
-.contactCardClip {
 }
 .cardClip1 {
   clip-path: polygon(
@@ -941,7 +956,7 @@ input::placeholder {
     text-align: start;
   }
   .contactImg {
-    display: none;
+    display: none; 
   }
   .cont-text {
     font-size: 30px;

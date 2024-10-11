@@ -18,7 +18,7 @@ const Footer = () => {
               <h1>+91 8377882115</h1>
             </div>
             <div className=" flex items-center justify-center">
-              <div class="cir1 text-[#000000] mr-3 material-symbols-outlined mb-3">
+              <div className="cir1 text-[#000000] mr-3 material-symbols-outlined mb-3">
                 mail
               </div>
               <div>support @bharatkare.com</div>

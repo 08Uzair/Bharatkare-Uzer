@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Button from "./Button";
 import Heading2 from "../general/Heading2";
-import model from "../../assets/model.webp";
+import model from "../../assets/model1.png";
 import calc from "../../assets/calc.png";
 import { useLocation } from "react-router-dom";
+import Form from "../custom/Form";
 const SingleDisease = () => {
   // const [checkedSymptoms, setCheckedSymptoms] = useState({
   //   farsightedness: false,
@@ -189,7 +190,7 @@ const SingleDisease = () => {
                 <input
                   type="text"
                   placeholder="Mobile Number"
-                  className="p-3 border rounded-lg w-full border-gray-300"
+                  Name="p-3 border rounded-lg w-full border-gray-300"
                 />
                 <div className="relative">
                   <select
@@ -229,43 +230,7 @@ const SingleDisease = () => {
 
       <div className="w-2/5 p-8">
         <div className="sticky top-8 bg-white p-8 rounded-lg shadow-md w-full">
-          <h2 className="text-xl font-semibold mb-4">Book Free Consultation</h2>
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                placeholder="Patient Name"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
-            <div>
-              <input
-                type="number"
-                placeholder="Mobile Number"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-              />
-            </div>
-            <div>
-              <select className="w-full p-3 border border-gray-300 rounded-lg">
-                <option>Select City</option>
-                <option>Talegaon-dabhade</option>
-                <option>Vadgaon-maval</option>
-                <option>Dehu</option>
-                <option>Khadkale</option>
-              </select>
-            </div>
-            <div>
-              <select className="w-full p-3 border border-gray-300 rounded-lg">
-                <option>Select Disease</option>
-                <option>Disease 1</option>
-                <option>Disease 2</option>
-                <option>Disease 3</option>
-              </select>
-            </div>
-            <div className="w-full">
-              <Button text="Book Now" />
-            </div>
-          </form>
+          <Form />
         </div>
       </div>
     </div>

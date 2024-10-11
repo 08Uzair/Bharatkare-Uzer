@@ -5,30 +5,22 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("Select Location");
 
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  const handleOptionClick = (option) => {
+    setSelected(option);
+    setIsOpen(false);
+  };
   const data = [
     { id: "/", name: "HOME" },
     { id: "/about", name: "ABOUT Us" },
     { id: "/contact", name: "CONTACT Us" },
   ];
 
-  const citiesData = [
-    "Hyderabad",
-    "Banglore",
-    "Mumbai",
-    "Pune",
-    "Delhi",
-    "Maharashtra",
-    "Tamil Nadu",
-    "Jaipur",
-  ];
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
-  };
-
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
   };
 
   return (
@@ -100,69 +92,33 @@ const Navbar = () => {
 
           {/* Location Icon */}
           <div
-            className="relative focus:outline-none cir"
-            onClick={toggleSidebar}
+            className="relative focus:outline-none cir cursor-pointer"
+            onClick={toggleDropdown}
           >
             <span className="material-symbols-outlined">pin_drop</span>
           </div>
 
-          {/* Sidebar */}
-          <div
-            className={`fixed top-0 right-0 w-[30%] h-full bg-white shadow-lg p-6 transform transition-transform duration-300 ease-in-out z-50 overflow-y-auto hide-scrollbar ${
-              sidebarVisible ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="text-[#031b4e] font-bold">Location Details</h2>
-              <span
-                className="material-symbols-outlined cursor-pointer"
-                onClick={toggleSidebar}
-              >
-                close
-              </span>
-            </div>
-
-            <div className="mt-4">
-              <div className="flex items-center justify-center outline-none">
-                <input
-                  style={{ border: "2px solid " }}
-                  className="p-2 rounded-[10px] m-3"
-                />
-              </div>
-
-              <div>
-                <div className="text-center">Popular Cities</div>
-                <div className="flex items-center justify-center flex-wrap">
-                  {citiesData.map((item, index) => (
-                    <div
-                      key={index}
-                      style={{
-                        boxShadow:
-                          " 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
-                      }}
-                      className="flex items-center justify-center flex-col rounded-[15px] cursor-pointer m-[2rem] w-[8rem] text-center h-[20vh] bg-[#fff]"
-                    >
-                      <div
-                        style={{
-                          boxShadow:
-                            " 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)",
-                        }}
-                        className="rounded-[50%] mt-[1rem] p-[3rem] bg-[#fff] m-[1rem]"
-                      ></div>
-                      <div className="text-[#031b4e] mb-[0.5rem]">{item}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Overlay (Blur Effect) */}
-          {sidebarVisible && (
-            <div
-              className="fixed w-full inset-0 bg-black bg-opacity-40 backdrop-blur-[20px] z-40"
-              onClick={toggleSidebar} // Clicking the overlay will close the sidebar
-            ></div>
+          {isOpen && (
+            <ul className="absolute bg-white border border-gray-300 rounded-lg shadow-lg right-[5rem] mt-[16.5rem] w-64 max-h-60 overflow-y-auto transition-opacity duration-300 ease-in-out z-20">
+              {[
+                "Hyderabad",
+                "Maharashtra",
+                "Delhi",
+                "Jaipur",
+                "Tamil-Nadu",
+                "Mumbai",
+                "Banglore",
+                "Karnataka",
+              ].map((location, idx) => (
+                <li
+                  key={idx}
+                  className="py-2 px-4 hover:bg-gray-100 cursor-pointer transition-all duration-200"
+                  onClick={() => handleOptionClick(location)}
+                >
+                  {location}
+                </li>
+              ))}
+            </ul>
           )}
 
           {/* Book an Appointment Button */}

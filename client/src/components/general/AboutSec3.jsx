@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import bg from "../../assets/bg3.webp";
 import Button3 from "./Button3";
 import Heading1 from "./Heading1";
-import Tab1 from "./Tab1";
 import Tab2 from "./Tab2";
 
 const AboutSec3 = () => {
@@ -61,7 +60,7 @@ const AboutSec3 = () => {
       style={{ width: containerWidth }} // Set the width dynamically
     >
       <div></div>
-      <div className="flex items-center justify-center  flex-col w-full p-[3rem]">
+      <div className=" flex items-center justify-center  flex-col w-full p-[3rem]">
         <Button3 text="OUR SERVICES" />
         <Heading1 text=" We Provide Various Directions" />
         <div>

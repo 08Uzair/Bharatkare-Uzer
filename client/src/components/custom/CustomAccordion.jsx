@@ -24,9 +24,9 @@ const CustomAccordion = ({ items }) => {
           >
             <h2 className="font-medium">{`0${index + 1}. ${item.question}`}</h2>
             {index === activeIndex ? (
-              <span class="material-symbols-outlined">keyboard_arrow_down</span>
+              <span className="material-symbols-outlined">keyboard_arrow_down</span>
             ) : (
-              <span class="material-symbols-outlined">keyboard_arrow_up</span>
+              <span className="material-symbols-outlined">keyboard_arrow_up</span>
             )}
           </div>
           {index === activeIndex && (

@@ -77,7 +77,7 @@ const Diseases = () => {
                     />
                     <div className=" w-[82%] text-center ">
                       <h1 className=" mt-3 text-[10px] text-[#505257] text-center">
-                        {item.name}
+                        { item.title.rendered}
                       </h1>
                     </div>
                   </div>
