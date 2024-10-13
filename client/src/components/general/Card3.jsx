@@ -8,7 +8,7 @@ const Card3 = () => {
           style={{
             background: `url(${bg}) center center / cover no-repeat`,
           }}
-          className="relative w-[22rem] text-white p-6 cardClip m-5"
+          className="homeCard relative w-[22rem] text-white p-6 cardClip m-5"
         >
           {/* Black overlay */}
           <div className=" cardClip absolute inset-0 bg-black opacity-60"></div>

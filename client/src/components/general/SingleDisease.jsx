@@ -3,7 +3,7 @@ import Button from "./Button";
 import Heading2 from "../general/Heading2";
 import model from "../../assets/model1.png";
 import calc from "../../assets/calc.png";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Form from "../custom/Form";
 const SingleDisease = () => {
   // const [checkedSymptoms, setCheckedSymptoms] = useState({
@@ -79,7 +79,7 @@ const SingleDisease = () => {
 
   return (
     <div className="flex min-h-screen">
-      <div className="w-3/5 overflow-y-auto p-8">
+      <div className="singleDisease w-3/5 overflow-y-auto p-8">
         <div className="bg-[#fff] rounded-[25px] p-6 mb-8">
           <div className="flex items-start justify-start ">
             <div className="w-[100%]">
@@ -103,13 +103,15 @@ const SingleDisease = () => {
                 today with Pristyn Care to undergo safe and effective {title} in
                 India.
               </div>
-              <Button text="Call Now : 123-4567-890" />
+              <NavLink to="/contact">
+                <Button text="Call Now : 123-4567-890" />
+              </NavLink>
             </div>
-            <div className="w-[100%]">
+            <div className="singleModel  w-[100%]">
               <img src={model} />
             </div>
           </div>
-          <div className="flex items-center justify-center bg-[#eef7ff] rounded-[15px] text-center mt-[2rem]">
+          <div className="flex !items-center !justify-center !flex-wrap bg-[#eef7ff] rounded-[15px] !text-center mt-[2rem]">
             <div className="m-[1rem] ">
               <span className="font-semibold text-[24px] text-[#0071BC]">
                 2M+
@@ -167,13 +169,16 @@ const SingleDisease = () => {
                 <img src={calc} alt="Calculator" className="w-12 h-12 mr-4" />
                 <h1 className="text-2xl font-semibold flex items-center justify-center">
                   <p
+                    className="calcText1"
                     style={{
                       textTransform: "capitalize",
                     }}
                   >
-                    {slug}-
+                    {slug}- Cost-Calculator
                   </p>
-                  Cost-Calculator
+                  <p className="calcText2 hidden text-[15px]">
+                    Cost-Calculator
+                  </p>
                 </h1>
               </div>
 
@@ -181,7 +186,7 @@ const SingleDisease = () => {
                 Fill details to get actual cost
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="calculator grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <input
                   type="text"
                   placeholder="Patient Name"
@@ -208,7 +213,7 @@ const SingleDisease = () => {
                 </div>
               </div>
 
-              <div className="flex justify-center">
+              <div className="flex items-center justify-start">
                 <button className="bg-blue-600 text-white px-6 py-3 rounded-lg">
                   Get actual cost
                 </button>
@@ -218,7 +223,7 @@ const SingleDisease = () => {
         </div>
 
         <div className="blogContainer h-auto rounded-[25px] list-disc bg-[#fff] p-[3.5rem] mt-[3rem] mb-[3rem]">
-          <div className="roboto leading-[40px]  text-[#6e778c] text-[16px] ">
+          <div className="blogtxt roboto leading-[40px]  text-[#6e778c] text-[16px] ">
             <h1 className="roboto">{title}</h1>
             <div
               className="roboto "
@@ -228,7 +233,7 @@ const SingleDisease = () => {
         </div>
       </div>
 
-      <div className="w-2/5 p-8">
+      <div className="singleForm w-2/5 p-8">
         <div className="sticky top-8 bg-white p-8 rounded-lg shadow-md w-full">
           <Form />
         </div>

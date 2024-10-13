@@ -44,7 +44,7 @@ const Card4 = ({ selectedCategory }) => {
               item.title.rendered
             )
           }
-          className="w-[100%] text-start"
+          className="w-[100%] text-start flex items-center justify-center flex-col"
         >
           <div
             key={index}
@@ -65,10 +65,11 @@ const Card4 = ({ selectedCategory }) => {
               our Services The medical professional doctors available in the
               clinic
             </p>
-            <img
-              src={item.content.rendered?.split('src="')[1]?.split('"')[0]}
-              alt={item.sname}
-            />
+              <img
+              className="smallIcon"
+                src={item.content.rendered?.split('src="')[1]?.split('"')[0]}
+                alt={item.sname}
+              />
           </div>
         </button>
       ))}

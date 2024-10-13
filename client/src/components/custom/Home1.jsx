@@ -105,7 +105,7 @@ const Home1 = () => {
           and it does not just mean absence of diseases.
         </p>
 
-        <div className="mt-8 w-[40%]">
+        <div className=" homebtn mt-8 w-[40%]">
           <button onClick={handleOpen}>
             <Button text=" BOOK AN APPOINTMENT" />
           </button>
@@ -250,7 +250,8 @@ const Home1 = () => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-1/2 relative flex items-center justify-center">
+
+      <div className="lg:w-1/2 relative flex items-center justify-center righSec">
         {/* Background Circles */}
         <div className="absolute top-[-2rem] left-[4rem] w-[33rem] h-[33rem] bg-[#031948]  rounded-full clip-circle-gray"></div>
         <div className="absolute top-[-1rem] left-[20rem] w-[20rem] h-[20rem] bg-[#eff6fc] border-[#031948] border-[1rem] rounded-full clip-circle-blue"></div>

@@ -28,7 +28,7 @@ const Heading2 = ({ text, txtSize }) => {
     <div className="flex items-center justify-start mt-[2rem]">
       <span
         style={{ fontSize: `${txtSize}` }}
-        className="text-[#031b4e] font-semibold"
+        className="text-[#031b4e] font-semibold "
       >
         {/* Container motion.div for the stagger effect */}
         <motion.div

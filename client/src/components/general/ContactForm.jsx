@@ -117,7 +117,7 @@ const ContactForm = () => {
             </button>
           </div>
 
-          <h2 className="cont-text text-[48px] leading-[60px]  font-medium text-[#031b4e] mb-6">
+          <h2 className=" cont-text text-[48px] leading-[60px]  font-medium text-[#031b4e] mb-6">
             Make an appointment
             <br />
             apply for treatments
@@ -194,7 +194,7 @@ const ContactForm = () => {
 
             <div className="cont-btn w-[60%]">
               <button type="submit">
-                <Button text="Submit Now" />
+                <Button text="Book Now" />
               </button>
             </div>
           </form>

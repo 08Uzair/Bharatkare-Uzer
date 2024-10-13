@@ -3,7 +3,7 @@ import React from "react";
 const Card1 = () => {
   return (
     <>
-      <div>
+      <div className="homeCard">
         <div className="relative w-[22rem] bg-blue-500 text-white p-6 cardClip m-5">
           {/* Inverted border-radius using pseudo-elements */}
 {/* 

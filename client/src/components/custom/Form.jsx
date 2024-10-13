@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import bg from "../../assets/model.webp";
 import Button from "../general/Button";
 const Form = () => {
   const [name, setName] = useState("");
@@ -86,9 +85,7 @@ const Form = () => {
         <h2 className="txt-form text-xl font-semibold mb-4">
           Book Free Appointment
         </h2>
-        <div className=" w-[41%] model1">
-          <img className="w-[100%]" src={bg} alt="Surgery illustration" />
-        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input

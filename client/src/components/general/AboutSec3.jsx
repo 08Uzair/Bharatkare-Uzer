@@ -56,7 +56,7 @@ const AboutSec3 = () => {
   return (
     <div
       ref={sectionRef}
-      className="mainScreen grid absolute top-[0px] rounded-tl-[30px] bg-[#3266c1] rounded-tr-[30px] transition-all duration-500  mx-auto mb-[8rem]"
+      className="mainScreen grid  rounded-tl-[30px] bg-[#3266c1] rounded-tr-[30px] transition-all duration-500  mx-auto mb-[8rem]"
       style={{ width: containerWidth }} // Set the width dynamically
     >
       <div></div>

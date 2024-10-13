@@ -62,19 +62,23 @@ const AboutSec4 = () => {
       {/* Main Container */}
       <div className="aboutSec4 container mx-auto mt-12 flex  justify-between">
         {/* Left Box */}
-        <div className="para1 w-[50%] p-[10rem] h-[80vh] sticky top-9">
+        <div className="para1 p-[10rem] w-[50%] h-[80vh] sticky top-9">
           <div className="flex flex-col items-start justify-center h-full">
             <Button3 text="MOTIVATION" />
-            <Heading2
-              txtSize="3.5rem"
-              text="Department of a medical health care"
-            />
+            <div className="flex items-center justify-start mt-[2rem]">
+              <span
+                style={{ fontSize: "3.5rem" }}
+                className="abouttxt text-[#031b4e] font-semibold "
+              >
+                Department of a medical health care
+              </span>
+            </div>
             <div className="mt-[3rem] leading-8 text-[#767f93]">
               The healthcare arena there was a felt need of developing new as
               well as upgrading the existing functioning and processes,
               consequently develop an institution supported with necessary
             </div>
-            <div className="mt-[2rem]">
+            <div className="mt-[2rem] mb-[3rem]">
               <Button text="READ MORE" />
             </div>
           </div>
@@ -95,7 +99,7 @@ const AboutSec4 = () => {
                     <img
                       src={item.bg}
                       alt="Medical Robot"
-                      className="w-[100%] h-[40vh]  rounded-[25px]"
+                      className="aboutImg w-[100%] h-[40vh]  rounded-[25px]"
                     />
                   </div>
 

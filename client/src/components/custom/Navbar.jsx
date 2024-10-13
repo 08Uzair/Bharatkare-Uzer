@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [searchVisible, setSearchVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState("Select Location");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -21,6 +22,10 @@ const Navbar = () => {
 
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -127,9 +132,59 @@ const Navbar = () => {
               <Button text="BOOK AN APPOINTMENT" />
             </NavLink>
           </div>
-          <span className="menu material-symbols-outlined">menu</span>
+
+          {/* Menu Button */}
+          <span
+            className="menu material-symbols-outlined cursor-pointer"
+            onClick={toggleMenu}
+          >
+            menu
+          </span>
         </div>
       </div>
+
+      {/* Mobile Menu Drawer */}
+      {menuOpen && (
+        <div className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-30 transition-transform transform translate-x-0">
+          <div className="flex justify-end p-4">
+            <span
+              className="material-symbols-outlined cursor-pointer"
+              onClick={toggleMenu}
+            >
+              close
+            </span>
+          </div>
+          <ul className="flex flex-col items-start justify-center  p-[2rem] space-y-4">
+            {data.map((item) => (
+              <li key={item.id} className="menuBtn w-full list-none">
+                <NavLink
+                  to={item.id}
+                  className="text-[#000] font-normal tracking-wide letter-spacing-[0.3px] cursor-pointer mb-[1rem] "
+                  onClick={toggleMenu} // Close menu on click
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <div>
+            <select
+              className="dropMenu w-full p-3 border border-gray-300 rounded-lg"
+              required
+            >
+              <option value="">SELECT CITY</option>
+              <option value="Talegaon-dabhade">Talegaon-dabhade</option>
+              <option value="Vadgaon-maval">Vadgaon-maval</option>
+              <option value="Dehu">Dehu</option>
+              <option value="Khadkale">Khadkale</option>
+            </select>
+          </div>
+          <div className="menuNumber">
+            {" "}
+            <a href="tel:+91 8377882115"> +91 8377882115</a>{" "}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

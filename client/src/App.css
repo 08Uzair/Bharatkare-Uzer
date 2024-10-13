@@ -22,7 +22,7 @@ body {
 .mainScreen {
   background-image: url("./assets/bg3.webp"); /* Make sure the path is correct */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  position: relative;
+  position: relative !important;
 }
 .btn {
   font-weight: 600;
@@ -72,7 +72,6 @@ body {
   color: #3368c6;
 }
 
-
 /* Home1 circles  */
 
 .clip-circle-gray {
@@ -83,9 +82,7 @@ body {
   clip-path: circle(50%);
 }
 
-
 /*  */
-
 
 /* Loader */
 .loaderAnimate {
@@ -597,6 +594,27 @@ body {
   color: #fff;
   cursor: pointer;
 }
+.menuBtn {
+  padding: 1rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.dropMenu {
+  padding: 1rem !important;
+  border: 2px solid !important;
+  width: 75% !important;
+  margin-left: 2rem !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.menuNumber {
+  padding: 1rem;
+  border: 2px solid;
+  width: 75%;
+  border-radius: 10px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
 .sub-icon {
   font-size: 3rem;
   background: #fff;
@@ -779,10 +797,10 @@ input::placeholder {
 
 @media (max-width: 1535px) {
   .contact {
-    display: none;
+    display: none !important;
   }
   .navOptions {
-    margin-left: -2rem;
+    margin-left: -2rem !important;
   }
   .button {
     font-size: 9px !important;
@@ -806,233 +824,295 @@ input::placeholder {
     /* align-items: center; */
     justify-content: center;
     flex-direction: column;
-    position: relative;
-    top: 4rem;
+    position: relative !important;
+    top: 4rem !important;
   }
   .para1 {
-    width: 100%;
-    padding: 2rem;
-    position: relative;
+    width: 100% !important;
+    position: relative !important;
+    padding: 3rem !important;
   }
   .para2 {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (max-width: 1350px) {
   .grid {
-    display: flex;
+    display: flex !important;
   }
 }
 @media (max-width: 1280px) {
   .navOptions {
-    display: none;
+    display: none !important;
   }
   .logo {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
   .menuButton {
     display: none !important;
   }
   .menu {
-    display: flex;
-    font-size: 2rem;
+    display: flex !important;
+    font-size: 2rem !important;
   }
   .model {
-    display: none;
+    display: none !important;
   }
   .homeForm {
-    width: 80%;
+    width: 80% !important;
   }
   .model1 {
-    display: flex;
+    display: flex !important;
   }
   .diseaseSection {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .singleDisease {
+    width: 100% !important;
+  }
+  .singleForm {
+    display: none !important;
   }
   .subSec {
     flex-direction: column !important;
   }
   .subBox {
-    width: 90%;
+    width: 90% !important;
   }
   .tabToggle {
-    display: none;
+    display: none !important;
   }
   .tabs-btn {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
   }
 }
 @media (max-width: 1020px) {
   .homeForm {
-    margin-left: 0px;
+    margin-left: 0px !important;
   }
 }
 @media (max-width: 1000px) {
   .cardClip {
-    clip-path: none;
-    border-radius: 20px;
+    clip-path: none !important;
+    border-radius: 20px !important;
   }
   .cardClip1 {
-    clip-path: none;
-    border-radius: 20px;
+    clip-path: none !important;
+    border-radius: 20px !important;
   }
   .tabBox {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .tabContent {
-    width: 100%;
-    margin-top: 2rem;
+    width: 100% !important;
+    margin-top: 2rem !important;
   }
   .txt-form {
-    text-align: center;
+    text-align: center !important;
   }
   .form-btn {
-    width: 65%;
+    width: 65% !important;
   }
 }
 @media (max-width: 900px) {
   .stepSection {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .stepCard {
-    width: 100%;
+    width: 100% !important;
   }
 }
-
 @media (max-width: 865px) {
   .stepbox {
-    left: 0;
-    top: 0;
-    width: 20%;
-    height: 5vh;
+    left: 0 !important;
+    top: 0 !important;
+    width: 20% !important;
+    height: 5vh !important;
+  }
+  .calculator {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: start !important;
+    flex-wrap: wrap !important;
+  }
+}
+@media (max-width: 800px) {
+  .singleModel {
+    display: none !important;
+  }
+}
+@media (max-width: 785px) {
+  .righSec {
+    display: none !important;
   }
 }
 @media (max-width: 760px) {
   .cir {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 700px) {
   .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
   }
 }
 @media (max-width: 590px) {
   .txt1 {
-    font-size: 30px;
-    line-height: normal;
-    text-align: center;
+    font-size: 30px !important;
+    line-height: normal !important;
+    text-align: center !important;
   }
-  .cardClip1 {
-    padding: 2rem;
-    width: 24rem;
+  /* .cardClip1 {
+    padding: 2rem !important;
+    width: 24rem !important;
+  } */
+  .smallIcon {
+    position: relative;
+    bottom: 0.8rem;
   }
 }
 @media (max-width: 530px) {
+  .calcText1 {
+    display: none !important;
+  }
+  .calcText2 {
+    display: flex !important;
+  }
   .subBox-txt {
-    font-size: 25px !important;
+    font-size: 25px !important ;
   }
   .btn1 {
-    width: 50%;
+    width: 50% !important;
   }
   .head2 {
-    font-size: 1.3rem !important;
+    font-size: 1.3rem !important ;
   }
   /* .txt1 {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   } */
   .footer1 {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    text-align: start;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
+    text-align: start !important;
   }
   .contactImg {
-    display: none; 
+    display: none !important;
   }
   .cont-text {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 20px !important;
+    line-height: 40px !important;
+    width: 100% !important;
+    
   }
   .cont-btn {
-    width: 80%;
+    width: 80% !important;
   }
   .txt2 {
-    font-size: 25px;
+    font-size: 25px !important;
   }
   .txt3 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
   .banner-txt2 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
   .aboutService-img {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
-
 @media (max-width: 510px) {
+  .homebtn {
+    width: 70% !important;
+  }
   .subInput {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
   }
   .inputText1 {
-    border-radius: 20px;
-    margin-bottom: 1rem;
+    border-radius: 20px !important;
+    margin-bottom: 1rem !important;
   }
   .btn2 {
-    border-radius: 20px;
+    border-radius: 20px !important;
   }
   .cardClip1 {
-    width: 18rem;
+    width: 100% !important;
   }
   .cardClip {
-    margin: 0;
-    margin-bottom: 1.5rem;
+    margin: 0 !important;
   }
   .subBox {
-    margin: 0;
-    margin-bottom: 1.5rem;
+    margin: 0 !important;
+    margin-bottom: 1.5rem !important;
   }
   .card4Box {
-    width: 100%;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  .homeCard {
+    margin-bottom: 2rem !important;
+  }
+  .blogContainer {
+    padding: 1.5rem !important;
+  }
+  .blogtxt {
+    line-height: 30px !important;
+    font-size: 15px !important;
+  }
+  .abouttxt {
+    font-size: 2rem !important;
   }
 }
-
 @media (max-width: 410px) {
   .knowBtn {
-    width: 50%;
+    width: 50% !important ;
   }
 }
 @media (max-width: 380px) {
   .checOut {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .cardClip {
-    width: 19rem;
+    width: 19rem !important;
   }
   .sec2Btn {
-    width: 75%;
+    width: 75% !important;
   }
   .secImg {
-    width: 100%;
+    width: 100% !important;
+  }
+  .abouttxt {
+    font-size: 1.8rem !important;
+  }
+  .aboutImg {
+    height: 30vh !important;
+  }
+  .abt-txt {
+    padding: 1rem !important;
+  }
+  .homebtn {
+    width: 100% !important;
   }
 }
 @media (max-width: 320px) {
   .cardClip1 {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 20px;
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 20px !important;
   }
 }
