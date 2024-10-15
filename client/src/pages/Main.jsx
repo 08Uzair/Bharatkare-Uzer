@@ -5,6 +5,7 @@ import Section3 from "../components/general/Section3";
 import Subscribe from "../components/general/Subscribe";
 // import Home from "../components/custom/Home";
 import Diseases from "../components/general/Diseases";
+// import Home2 from "../components/custom/Home2";
 import Home1 from "../components/custom/Home1";
 
 const Main = () => {
@@ -12,6 +13,7 @@ const Main = () => {
     <>
       {/* <Home /> */}
       <Home1 />
+      {/* <Home2 /> */}
       <Diseases />
       <Section1 />
       <Section2 />

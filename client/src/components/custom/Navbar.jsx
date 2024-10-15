@@ -8,25 +8,26 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState("Select Location");
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handleOptionClick = (option) => {
     setSelected(option);
     setIsOpen(false);
   };
-  const data = [
-    { id: "/", name: "HOME" },
-    { id: "/about", name: "ABOUT Us" },
-    { id: "/contact", name: "CONTACT Us" },
-  ];
-
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
   };
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const data = [
+    { id: "/", name: "HOME" },
+    { id: "/about", name: "ABOUT Us" },
+    { id: "/", name: "SERVICES" },
+    { id: "/contact", name: "CONTACT Us" },
+  ];
 
   return (
     <nav className="pt-[3rem] pb-[1rem] sora">
@@ -34,12 +35,99 @@ const Navbar = () => {
         <div className="navOptions flex space-x-4 text-[12px] pl-[3rem]">
           {data.map((item) => (
             <React.Fragment key={item.id}>
-              <NavLink
-                to={item.id}
-                className="text-[#031b4e] font-bold tracking-wide hover:text-[#3368c6] letter-spacing-[0.3px]"
-              >
-                {item.name}
-              </NavLink>
+              {item.name === "SERVICES" ? (
+                // Dropdown for Services
+                <div
+                  className="relative"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  // onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <NavLink
+                    to={item.id}
+                    className="text-[#031b4e] font-bold tracking-wide hover:text-[#3368c6] letter-spacing-[0.3px]"
+                  >
+                    {item.name}
+                  </NavLink>
+
+                  {servicesDropdownOpen && (
+                    <div
+                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                      className="absolute mt-2 w-60 border-t-[5px] border-blue-700 bg-white text-[#031b4e] font-semibold rounded-lg shadow-lg z-10 "
+                    >
+                      <ul className="p-2 ">
+                        <li
+                          className="px-4 py-2 mb-[1rem]  rounded-lg cursor-pointer"
+                          onMouseEnter={() => setServicesDropdownOpen(true)}
+                        >
+                          <NavLink
+                            to="/service"
+                            className="dropLine block w-full h-full flex items-center justify-start"
+                          >
+                            <div className=" line w-[0px] h-[1.5px] bg-blue-500 mr-[5px]"></div>{" "}
+                            Proctology
+                          </NavLink>
+                        </li>
+                        <li
+                          className="px-4 py-2 mb-[1rem]  rounded-lg cursor-pointer"
+                          onMouseEnter={() => setServicesDropdownOpen(true)}
+                        >
+                          <NavLink
+                            to="/service"
+                            className="dropLine block w-full h-full flex items-center justify-start"
+                          >
+                            <div className=" line w-[0px] h-[1.5px] bg-blue-500 mr-[5px]"></div>{" "}
+                            Fistula
+                          </NavLink>
+                        </li>
+                        <li
+                          className="px-4 py-2 mb-[1rem]  rounded-lg cursor-pointer"
+                          onMouseEnter={() => setServicesDropdownOpen(true)}
+                        >
+                          <NavLink
+                            to="/service"
+                            className="dropLine block w-full h-full flex items-center justify-start"
+                          >
+                            <div className=" line w-[0px] h-[1.5px] bg-blue-500 mr-[5px]"></div>{" "}
+                            Fissure
+                          </NavLink>
+                        </li>
+                        <li
+                          className="px-4 py-2 mb-[1rem]  rounded-lg cursor-pointer"
+                          onMouseEnter={() => setServicesDropdownOpen(true)}
+                        >
+                          <NavLink
+                            to="/service"
+                            className="dropLine block w-full h-full flex items-center justify-start"
+                          >
+                            <div className=" line w-[0px] h-[1.5px] bg-blue-500 mr-[5px]"></div>{" "}
+                            Piles
+                          </NavLink>
+                        </li>
+                        <li
+                          className="px-4 py-2 mb-[1rem]  rounded-lg cursor-pointer"
+                          onMouseEnter={() => setServicesDropdownOpen(true)}
+                        >
+                          <NavLink
+                            to="/service"
+                            className="dropLine block w-full h-full flex items-center justify-start"
+                          >
+                            <div className=" line w-[0px] h-[1.5px] bg-blue-500 mr-[5px]"></div>{" "}
+                            Pilonidal Sinus
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                // Regular NavLink for other items
+                <NavLink
+                  to={item.id}
+                  className="text-[#031b4e] font-bold tracking-wide hover:text-[#3368c6] letter-spacing-[0.3px]"
+                >
+                  {item.name}
+                </NavLink>
+              )}
               <span className="text-[#031b4e] font-semibold hover:text-[#3368c6]">
                 •
               </span>
@@ -47,7 +135,7 @@ const Navbar = () => {
           ))}
         </div>
         <NavLink to="/">
-          <div className="logo flex items-center ml-[10rem]">
+          <div className="logo flex items-center ml-[3rem]">
             <img src={logo} alt="Logo" className="w-[55%]" />
           </div>
         </NavLink>
@@ -154,13 +242,13 @@ const Navbar = () => {
               close
             </span>
           </div>
-          <ul className="flex flex-col items-start justify-center  p-[2rem] space-y-4">
+          <ul className="flex flex-col items-start justify-center p-[2rem] space-y-4">
             {data.map((item) => (
               <li key={item.id} className="menuBtn w-full list-none">
                 <NavLink
                   to={item.id}
-                  className="text-[#000] font-normal tracking-wide letter-spacing-[0.3px] cursor-pointer mb-[1rem] "
-                  onClick={toggleMenu} // Close menu on click
+                  className="text-[#000] font-normal tracking-wide letter-spacing-[0.3px] cursor-pointer mb-[1rem]"
+                  onClick={toggleMenu}
                 >
                   {item.name}
                 </NavLink>
@@ -180,8 +268,7 @@ const Navbar = () => {
             </select>
           </div>
           <div className="menuNumber">
-            {" "}
-            <a href="tel:+91 8377882115"> +91 8377882115</a>{" "}
+            <a href="tel:+91 8377882115"> +91 8377882115</a>
           </div>
         </div>
       )}

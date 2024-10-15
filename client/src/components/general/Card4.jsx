@@ -48,7 +48,7 @@ const Card4 = ({ selectedCategory }) => {
         >
           <div
             key={index}
-            className="arrbutton w-full h-[402.4px] mb-[2rem] bg-[#adc3e8] cardClip1 hover:bg-[#fff] cursor-pointer p-[3rem]"
+            className="arrbutton  w-full h-[402.4px] mb-[2rem] bg-[#adc3e8] cardClip1 hover:bg-[#fff] cursor-pointer p-[3rem]"
           >
             <div className="mb-[-2rem]">
               <Arrow clr="#3266c1" bg={arr} />

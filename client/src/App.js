@@ -14,6 +14,7 @@ import SingleCard4 from "./components/general/SingleCard4";
 import Loaader from "./components/custom/Loader";
 import Home from "./components/custom/Home";
 import { Test } from "./components/custom/Test";
+import SingleService from "./components/general/SingleService";
 // import Home1 from "./components/custom/Home1";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/service" element={<SingleService />} />
           <Route path="/test" element={<Test />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
