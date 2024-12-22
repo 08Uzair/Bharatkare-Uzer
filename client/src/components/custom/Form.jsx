@@ -8,7 +8,7 @@ const Form = () => {
   const [city, setCity] = useState("");
   const [disease, setDisease] = useState("");
   const [selectDisease, setSelectDisease] = useState();
-  console.log(selectDisease);
+  // console.log(selectDisease);
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -61,7 +61,7 @@ const Form = () => {
               }
             )
             .then((response) => {
-              console.log(response);
+              // console.log(response);
 
               // Clear form fields after submission
               setName("");

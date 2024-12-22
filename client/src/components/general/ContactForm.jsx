@@ -82,7 +82,7 @@ const ContactForm = () => {
               }
             )
             .then((response) => {
-              console.log(response);
+              // console.log(response);
               // Clear form fields after submission
               setName("");
               setNumber("");

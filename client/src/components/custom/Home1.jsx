@@ -70,7 +70,7 @@ const Home1 = () => {
               }
             )
             .then((response) => {
-              console.log(response);
+              // console.log(response);
 
               // Clear form fields
               setName("");
@@ -98,11 +98,11 @@ const Home1 = () => {
       <div className="lg:w-1/2 mb-8 lg:mb-0">
         <h1 className="text-[3rem] font-bold text-[#7bad64]">
           <h1 className="herotxt1 text-[6.1rem]">
-            <span className="text-[#1e1b1c]">Bharat</span>
-            <span className="text-[#55a3c3]">Kare</span>
+            <span className="text-[#1e1b1c]">BHARAT</span>
+            <span className="text-[#55a3c3]">KARE</span>
           </h1>
 
-          <h2 className="herotxt2">BHORASA BHARAT KA</h2>
+          <h2 className="herotxt2">BHAROSA BHARAT KA</h2>
         </h1>
         <p className="text-gray-600 mt-4">
           Good health is the state of mental, physical, and social well-being

@@ -41,7 +41,7 @@ const Diseases = () => {
     return <div>Error: {error}</div>;
   }
   const filteredData = showMore ? data?.slice(0, 9) : data || [];
-  console.log(filteredData);
+  // console.log(filteredData);
 
   const handelNavigate = (slug, content, title) => {
     navigate(`/disease/${slug}`, {

@@ -6,7 +6,7 @@ import arr from "../../assets/w-arrow.png";
 import axios from "axios";
 const Card4 = ({ selectedCategory }) => {
   const [data, setData] = useState([]);
-  console.log(data);
+  // console.log(data);
 
   useEffect(() => {
     axios

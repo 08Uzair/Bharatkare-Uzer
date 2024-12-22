@@ -16,9 +16,9 @@ const SingleDisease = () => {
   }, []);
   const location = useLocation();
   const { slug, content, title } = location.state || {};
-  console.log(slug);
-  console.log(title);
-  console.log(content);
+  // console.log(slug);
+  // console.log(title);
+  // console.log(content);
   // console.log(posts);
   // const handleCheckboxChange = (symptom) => {
   //   setCheckedSymptoms((prev) => ({

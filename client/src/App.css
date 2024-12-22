@@ -820,22 +820,22 @@ input::placeholder {
 }
 @media (max-width: 1390px) {
   .aboutSec2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
   }
   .aboutSec4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
   }
   .aboutSec4-box {
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    flex-direction: column;
+    display: flex !important;
+    /* align-items: center !important; */
+    justify-content: center !important;
+    flex-direction: column !important;
     position: relative !important;
     top: 4rem !important;
   }
@@ -978,10 +978,10 @@ input::placeholder {
 }
 @media (max-width: 600px) {
   .herotxt1 {
-    font-size: 4rem;
+    font-size: 4rem !important;
   }
   .herotxt2 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 }
 @media (max-width: 590px) {
@@ -995,8 +995,8 @@ input::placeholder {
     width: 24rem !important;
   } */
   .smallIcon {
-    position: relative;
-    bottom: 0.8rem;
+    position: relative !important;
+    bottom: 0.8rem !important;
   }
 }
 @media (max-width: 530px) {
@@ -1099,10 +1099,10 @@ input::placeholder {
 }
 @media (max-width: 440px) {
   .herotxt1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   .herotxt2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 }
 @media (max-width: 410px) {

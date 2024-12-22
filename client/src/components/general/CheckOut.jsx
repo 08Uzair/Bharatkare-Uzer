@@ -24,7 +24,7 @@ const CheckOut = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your submit logic here
-    console.log("Form submitted:", formData);
+    // console.log("Form submitted:", formData);
   };
 
   return (

@@ -29,9 +29,9 @@ const SingleCard4 = () => {
   }, []);
   const location = useLocation();
   const { slug, content, title } = location.state || {};
-  console.log(slug);
-  console.log(title);
-  console.log(content);
+  // console.log(slug);
+  // console.log(title);
+  // console.log(content);
   return (
     <>
       <CustomWall txt1={`${title}`} txt2="Service" />
